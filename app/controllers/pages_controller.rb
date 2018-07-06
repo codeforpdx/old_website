@@ -8,6 +8,8 @@ class PagesController < ApplicationController
   def about
   end
 
+  
+
   # def projects
   #   #route projects to here
   #   #layout should be different as well
