@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+<hr class="featurette-divider">
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @blog.subtitle %>
-</p>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading"><%= @blog.title %>
+      <div class="text-muted"><%= @blog.subtitle %></div></h2>
+    <p class="lead"><%= @blog.text %></p>
+  </div>
+  <div class="col-md-5">
+    <%= image_tag @blog.img, alt: @blog.title, class: "featurette-image img-fluid mx-auto"%>
+  </div>
+</div>
 
-<p>
-  <strong>Text:</strong>
-  <%= @blog.text %>
-</p>
-<p>
-  <strong>Img:</strong>
-  <%= image_tag @blog.img, alt: @blog.title %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-primary" %> 
+<%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-primary" %>
 <%= link_to 'Back', blogs_path, class: "btn btn-warning" %>
+<hr class="featurette-divider">
