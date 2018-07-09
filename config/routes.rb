@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#who'
 
+  get '/quickstart', to: 'pages#quickstart'
+
   #about
   get '/about/conduct', to: 'about#conduct'
 

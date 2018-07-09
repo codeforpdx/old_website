@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def quickstart
+  end
+
   def contact
   end
 
