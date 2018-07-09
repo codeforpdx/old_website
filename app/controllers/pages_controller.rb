@@ -7,15 +7,13 @@ class PagesController < ApplicationController
 
   def about
   end
-
-  
-
   # def projects
   #   #route projects to here
   #   #layout should be different as well
   # end
 
   def news
+    @news = Blog.all
     #@tweets = SocialTool.twitter_search
     #route model to here add
     #@news = News.recent.page(params[:page]).per(10)

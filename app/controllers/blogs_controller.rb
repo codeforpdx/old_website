@@ -1,9 +1,10 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-
+  layout "application"
   # GET /blogs
   # GET /blogs.json
   def index
+    @count = Blog.count
     @blogs = Blog.all
   end
 

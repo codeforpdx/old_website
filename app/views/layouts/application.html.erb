@@ -3,24 +3,28 @@
   <head>
     <title>Code for PDX</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content=<%= @seo_keywords %> />
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="carousel.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
+
+  <body>
 
       <%= render '/shared/header' %>
+
+      <main role="main">
 
       <%= yield %>
 
       <%= render 'shared/footer' %>
 
-      </div>
+     </main>
+
   </body>
 </html>
 

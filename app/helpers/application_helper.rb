@@ -13,13 +13,21 @@ module ApplicationHelper
 			url: news_path,
 			title: "News"
 		},
+    {
+      url: blogs_path,
+      title: "Blog"
+    },
 		{
 			url: about_path,
-			title: "About Me"
+			title: "About Us"
 		},
 		{
-			url: contact_path,
-			title: "Contact"
+			url: '#',
+			title: "Work With Us"
+		},
+		{
+			url: '#',
+			title: "Donate"
 		}
 	]
 	end

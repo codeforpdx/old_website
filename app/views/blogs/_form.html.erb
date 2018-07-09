@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :blog_title %>
+    <%= form.text_field :title, id: :blog_title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, id: :blog_subtitle %>
+    <%= form.text_field :subtitle, id: :blog_subtitle, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :text %>
-    <%= form.text_area :text, id: :blog_text %>
+    <%= form.text_area :text, id: :blog_text, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :img %>
-    <%= form.text_area :img, id: :blog_img %>
+  <div class="form-group">
+		  <label class="btn btn-primary btn-block">
+		  		Upload main image file <%= form.file_field :img, style: 'display: none;' %>
+		  </label>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class: 'btn btn-primary btn-block' %>
   </div>
 <% end %>
