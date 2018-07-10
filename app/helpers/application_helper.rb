@@ -17,10 +17,15 @@ module ApplicationHelper
       target: "_self"
     },
     {
-      url: about_vision_path,
-      title: "Strategic Vision",
+      url: about_diversity_path,
+      title: "Commitment to Diversity",
       target: "_self"
     },
+    # {
+    #   url: about_vision_path,
+    #   title: "Strategic Vision",
+    #   target: "_self"
+    # },
     {
       url: about_press_path,
       title: "Press",
@@ -83,6 +88,11 @@ module ApplicationHelper
       url: blogs_path,
       title: "Blog",
       target: "_self"
+    },
+    {
+      url: 'https://www.twitter.com/codeforpdx',
+      title: "Twitter",
+      target: "_blank"
     },
 		{
 			url: '#',

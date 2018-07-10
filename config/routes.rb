@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get '/about/projects', to: 'about#projects'
 
-  get '/about/vision', to: 'about#vision'
+  # get '/about/vision', to: 'about#vision'
 
   get '/about/what', to: 'about#what'
 
