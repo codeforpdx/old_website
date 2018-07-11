@@ -99,8 +99,7 @@ module ApplicationHelper
 			title: "Donate",
       target: "_self"
 		}
-
-	]
+  ]
 	end
 
   def active? path

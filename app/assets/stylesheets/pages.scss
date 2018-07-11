@@ -3,3 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "gritter";
+
+#main_featurette {
+    background-image: image-url('portland.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}

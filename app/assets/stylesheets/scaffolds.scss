@@ -12,6 +12,17 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
+.navbar-nav {
+  line-height: 40px;
+  
+  p{
+    line-height: 40px;
+  }
+  .nav-link {
+    font-size: 15px;
+    margin: 0px 15px 0px 15px;
+  }
+}
 
 pre {
   background-color: #eee;
