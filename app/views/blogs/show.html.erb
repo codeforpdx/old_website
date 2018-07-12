@@ -4,9 +4,9 @@
 
 <div class="row featurette">
   <div class="col-md-7">
-    <h2 class="featurette-heading"><%= @blog.title %>
-      <div class="text-muted"><%= @blog.subtitle %></div></h2>
-    <p class="lead"><%= @blog.text %></p>
+    <h1><%= @blog.title %>
+      <h3 class="text-muted"><%= @blog.subtitle %></h3></h1>
+    <p><%= @blog.text %></p>
   </div>
   <div class="col-md-5">
     <%= image_tag @blog.img, alt: @blog.title, class: "featurette-image img-fluid mx-auto"%>

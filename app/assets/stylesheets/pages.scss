@@ -7,7 +7,22 @@
 #main_featurette {
     background-image: image-url('portland.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    padding-bottom: 3rem;
+}
+
+.featurette-heading {
+    color: white;
+    text-shadow: -1px 1px #000;
+    .text-muted {
+        color: #ffeacc !important;
+    }
+}
+
+.lead {
+    color: white;
+    text-shadow: 
+    -1px 1px #000,
+    -1px -1px #000;
 }
