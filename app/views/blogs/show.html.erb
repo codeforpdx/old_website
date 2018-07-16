@@ -1,18 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<hr class="featurette-divider">
+<p>Published MM/DD/YYYY</p>
+<h1><%= @blog.title %></h1>
+<h3><%= @blog.subtitle %></h3>
 
-<div class="row featurette">
-  <div class="col-md-7">
-    <h1><%= @blog.title %>
-      <h3 class="text-muted"><%= @blog.subtitle %></h3></h1>
-    <p><%= @blog.text %></p>
-  </div>
-  <div class="col-md-5">
-    <%= image_tag @blog.img, alt: @blog.title, class: "featurette-image img-fluid mx-auto"%>
-  </div>
-</div>
+  <%= image_tag @blog.img, alt: @blog.title, class: "img-fluid mx-auto blog-img"%>
+
+<p><%= @blog.text %></p>
 
 <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-primary" %>
 <%= link_to 'Back', blogs_path, class: "btn btn-warning" %>
-<hr class="featurette-divider">

@@ -8,7 +8,7 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-  
+    
     <div class="carousel-inner">
       <div class="carousel-item active">
         <%= image_tag @blogs[@count-1].img, class: "first-slide", alt: @blogs[@count-1].title %>
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  
+    
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -53,25 +53,48 @@
   </div>
 </div>
 
-<hr class="featurette-divider">
-  
-<% 5.times do |item| %>
-  <% count = @count - 1 - item %>
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h1>
-        <%= @blogs[count].title %>
-        <h3><%= @blogs[count].subtitle %></h3>
-      </h1>
-      <p><%= @blogs[count].text %></p>
+<div class="container col-md-8 offset-md-2 topper">
+  <div class="container"> 
+    <div id="latest-blogpost">
+      Latest
+      <div class="row featurette">
+        <div class="col-8">
+          <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
+            <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"img-fluid mx-auto latest-post-img"  %>
+          <% end %>
+        </div>
+        <div class="col">
+          <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
+            <h1><%= @blogs[@count - 1].title %></h1>
+            <h4><%= @blogs[@count - 1].subtitle %></h4>
+            <p><%= @blogs[@count - 1].text[0, 149] + '...' %></p>
+            <h6>Published on MM/DD/YYYY</h6>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="col-md-5">
-      <%= image_tag @blogs[@count-4-item].img, alt: @blogs[@count-3-item].title, class:"featurette-image img-fluid mx-auto"  %>
+    
+    <div id="next-three-blogposts" class="row featurette topper">
+      <% 3.times do |i| %>
+        <% count = @count - 2 - i %>
+        <div class="col">
+          <%= link_to "/blogs/#{@blogs[count].id}" do %>
+            <%= image_tag @blogs[count].img, alt: @blogs[count].title, class:"img-fluid mx-auto blog-post-img"  %>
+            <h4><%= @blogs[count].title %></h4>
+            <h6><%= @blogs[count].subtitle %></h6>
+            <p>Published on MM/DD/YYYY</p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
+    
   </div>
-<% end %>
+
   
-<hr class="featurette-divider">
+  <hr class="featurette-divider">
 
+  <div class="container">
+    <%= link_to 'New Blog', new_blog_path %>
+  </div>
+</div>
 
-<%= link_to 'New Blog', new_blog_path %>
