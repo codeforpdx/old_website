@@ -107,17 +107,6 @@ module ApplicationHelper
 		"active" if current_page? path
 	end
 
-  def about_helper style, tag_type
-    about_links = ""
-
-    about_items.each do |item|
-      about_links << "<#{tag_type}"
-    end
-
-    about_links.html_safe
-
-  end
-
   def array_to_html input_array, style, tag_type
     # TODO: Refactor this ugly ugly mess
     html_output = ''
@@ -134,7 +123,7 @@ module ApplicationHelper
             end
           html_output << "</div> </div>"
         else
-          html_output << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+          html_output << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}' target=#{item[:target]}>#{item[:title]}</a></#{tag_type}>"
         end
       end
     html_output.html_safe
