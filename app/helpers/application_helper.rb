@@ -1,6 +1,6 @@
 module ApplicationHelper
   def copyright_generator
-    HarkerViewTool::Renderer.copywrite 'Code for PDX a Code for America Brigade', 'All Rights Reserved'
+    HarkerViewTool::Renderer.copywrite 'Code for PDX, a Code for America Brigade', 'All Rights Reserved'
   end
 
   def about_items
@@ -103,18 +103,17 @@ module ApplicationHelper
 	end
 
   def active? path
-		"active" if current_page? path
+	  "active" if current_page? path
 	end
 
   def about_helper style, tag_type
     about_links = ""
-
+    
     about_items.each do |item|
       about_links << "<#{tag_type}"
     end
-
+    
     about_links.html_safe
-
   end
 
   def array_to_html input_array, style, tag_type
