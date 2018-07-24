@@ -40,10 +40,12 @@
       </div>
       <div class="col">
         <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-          <h1><%= @blogs[@count - 1].title %></h1>
-          <h4><%= @blogs[@count - 1].subtitle %></h4>
-          <p><%= @blogs[@count - 1].text[0, 149] + '...' %></p>
-          <h6>Published on MM/DD/YYYY</h6>
+          <h1 class="headline"><%= @blogs[@count - 1].title %></h1>
+          <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
+          <p>
+            <span class="author">Author Name</span><br>
+            <span class="lede">07/23</span>
+          </p>
         <% end %>
       </div>
     </div>
@@ -63,6 +65,11 @@
       <i class="far fa-check-square"></i> 
       Get started easily with our 
       <%= link_to 'Quick Start Guide', quickstart_path %>.
+    </p>
+    <p>
+      <i class="fab fa-twitter-square"></i>
+      Keep up with us on 
+      <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank' %>
     </p>
     <p>
       <i class="fab fa-github-square"></i> 
