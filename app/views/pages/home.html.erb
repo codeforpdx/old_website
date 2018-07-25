@@ -1,5 +1,5 @@
 <div style="width:100%" id="main_featurette">
-  <div class="container featurette col-md-8 offset-md-2" id="main-text">
+  <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading">
       We Are Code for PDX.
     </h1>
@@ -16,31 +16,31 @@
   </div>
 </div>
 
-<div class="container col-md-8 offset-md-2 topper">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
   <div class="container">
     <h3>Projects:</h3>
     
     <%= link_to about_projects_path do %>
-      See more of our projects <i class="fas fa-arrow-right"></i>
+      Coming soon <i class="fas fa-arrow-right"></i>
     <% end %>
   </div>
 </div>
 
 <hr class="featurette-divider">
 
-<div class="container col-md-8 offset-md-2">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
   <div class="container">
     <h3>Blog:</h3>
     
     <div class="row featurette blog">
-      <div class="col-8">
+      <div class="col-lg-8">
         <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
           <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"img-fluid mx-auto latest-post-img"  %>
         <% end %>
       </div>
-      <div class="col">
+      <div class="col-lg">
         <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-          <h1 class="headline"><%= @blogs[@count - 1].title %></h1>
+          <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
           <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
           <p>
             <span class="author">Author Name</span><br>
@@ -58,9 +58,9 @@
 
 <hr class="featurette-divider">
 
-<div class="container col-md-8 offset-md-2">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
   <div class="container contact">
-    <h3>Contact/Work with us</h3>
+    <h3>Get In Touch:</h3>
     <p>
       <i class="far fa-check-square"></i> 
       Get started easily with our 

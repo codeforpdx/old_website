@@ -21,4 +21,13 @@
       <%= copyright_generator %>
     </p>
   </div>
+  <script>
+    $(function() {
+      $('body').on('click.hideNav', function(e) {
+        if (!$(e.target).hasClass('nav-link')) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      })
+    })
+  </script>
 </footer>

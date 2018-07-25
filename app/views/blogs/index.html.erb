@@ -7,14 +7,14 @@
       <hr>
       
       <div class="row featurette">
-        <div class="col-8">
+        <div class="col-lg-8">
           <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
             <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"img-fluid mx-auto latest-post-img"  %>
           <% end %>
         </div>
-        <div class="col">
+        <div class="col-lg">
           <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-            <h1 class="headline"><%= @blogs[@count - 1].title %></h1>
+            <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
             <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
             <p>
               <span class="author">Author Name</span><br>
@@ -29,7 +29,7 @@
     <div id="next-three-blogposts" class="row featurette topper">
       <% 3.times do |i| %>
         <% count = @count - 2 - i %>
-        <div class="col">
+        <div class="col-lg">
           <%= link_to "/blogs/#{@blogs[count].id}" do %>
             <%= image_tag @blogs[count].img, alt: @blogs[count].title, class:"img-fluid mx-auto blog-post-img"  %>
             <h4 class="headline"><%= @blogs[count].title %></h4>
@@ -48,7 +48,7 @@
     <div id="next-three-blogposts" class="row featurette">
       <% 3.times do |i| %>
         <% count = @count - 5 - i %>
-        <div class="col">
+        <div class="col-lg">
           <%= link_to "/blogs/#{@blogs[count].id}" do %>
             <%= image_tag @blogs[count].img, alt: @blogs[count].title, class:"img-fluid mx-auto blog-post-img"  %>
             <h4 class="headline"><%= @blogs[count].title %></h4>

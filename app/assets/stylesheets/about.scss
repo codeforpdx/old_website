@@ -21,6 +21,8 @@ p {
     img {
         border-radius: 150px;
         width: 100%;
+        max-height: 300px;
+        max-width: 300px;
     }
 }
 
@@ -30,21 +32,17 @@ li {
 }
 
 .project-box {
-    text-align: right;
+    @media(min-width: 768px) {
+        text-align: right;
+    }
     margin-top: 50px;
     p {
         text-align: left;
         padding-top: 10px;
     }
-    a {
-        color: black;
-        &:hover {
-            color: black;
-            text-decoration: none;
-        }
-    }
     img {
         border-radius: 25px;
         width: 100%;
+        max-height: 300px;
     }
 }
