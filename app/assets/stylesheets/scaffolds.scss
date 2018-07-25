@@ -2,34 +2,53 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Cabin', sans-serif !important;
   font-size: 13px;
   line-height: 18px;
+  
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+.navbar-nav {
+  line-height: 40px;
+  
+  p{
+    line-height: 40px;
+  }
+  .nav-link {
+    font-size: 15px;
+    margin: 0px 15px 0px 15px;
+  }
+}
+.navbar-brand {
+  line-height: 50px !important;
+}
+.navbar-collapse {
+  white-space: nowrap; 
+  line-height: 50px !important;
+  
+  @media(min-width: 768px) {
+    position: absolute; 
+    right: 0px; 
+  }
+  @media (min-width: 992px) { 
+    position: absolute;
+    right: 75px;
+  }
+  @media (min-width: 1200px) {
+    position: absolute;
+    right: 200px;
+  }
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 th {
@@ -63,15 +82,10 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
-  }
+h2 {
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+}
 
   ul li {
     font-size: 12px;

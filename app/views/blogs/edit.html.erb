@@ -1,6 +1,12 @@
-<h1>Editing Blog</h1>
+<div class="container col-md-6 offset-md-3 topper">
+  <div class="container">
+    <h1>Editing Blog</h1>
+    
+    <%= render 'form', blog: @blog %>
+    
+    <%= link_to 'Discard edit', @blog %> | <%= link_to 'Back to blog home', blogs_path %>
+  </div>
+</div>
 
-<%= render 'form', blog: @blog %>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+

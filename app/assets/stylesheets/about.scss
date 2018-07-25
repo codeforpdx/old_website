@@ -1,3 +1,48 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// about#who
+.topper {
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+.member-box {
+    margin-top: 50px;
+    text-align: center;
+    p { 
+        font-size: 18px; 
+        text-align: left;
+    }
+    .member-links { font-size: 30px; }
+    img {
+        border-radius: 150px;
+        width: 100%;
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
+
+// other about routes
+li {
+    margin-bottom:7px;
+}
+
+.project-box {
+    @media(min-width: 768px) {
+        text-align: right;
+    }
+    margin-top: 50px;
+    p {
+        text-align: left;
+        padding-top: 10px;
+    }
+    img {
+        border-radius: 25px;
+        width: 100%;
+        max-height: 300px;
+    }
+}
