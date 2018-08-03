@@ -17,8 +17,13 @@
             <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
             <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
             <p>
-              <span class="author">Author Name</span><br>
-              <span class="lede">07/23</span>
+              <span class="lede author">
+                <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
+                  Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %> 
+                <% else %>
+                  <%= @blogs[@count - 1].created_at.to_s[5,5] %> 
+                <% end %>
+              </span>
             </p>
           <% end %>
         </div>
@@ -35,8 +40,13 @@
             <h4 class="headline"><%= @blogs[count].title %></h4>
             <h6 class="lede"><%= @blogs[count].subtitle %></h6>
             <p>
-              <span class="author">Author Name</span><br>
-              <span class="lede">07/23</span>
+              <span class="lede author">
+                <% if @blogs[count].updated_at > @blogs[count].created_at %>
+                  Updated <%= @blogs[count].updated_at.to_s[5,5] %> 
+                <% else %>
+                  <%= @blogs[count].created_at.to_s[5,5] %> 
+                <% end %>
+              </span>
             </p>
           <% end %>
         </div>
@@ -54,8 +64,13 @@
             <h4 class="headline"><%= @blogs[count].title %></h4>
             <h6 class="lede"><%= @blogs[count].subtitle %></h6>
             <p>
-              <span class="author">Author Name</span><br>
-              <span class="lede">07/23</span>
+              <span class="lede author">
+                <% if @blogs[count].updated_at > @blogs[count].created_at %>
+                  Updated <%= @blogs[count].updated_at.to_s[5,5] %> 
+                <% else %>
+                  <%= @blogs[count].created_at.to_s[5,5] %> 
+                <% end %> 
+              </span>
             </p>
           <% end %>
         </div>

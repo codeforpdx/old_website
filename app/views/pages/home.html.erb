@@ -19,9 +19,25 @@
 <div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
   <div class="container">
     <h3>Projects:</h3>
-    
+    <div class="row project-box">
+      <div class="col-md-4">
+        <h1 class='headline'>
+          <%= @projects[-1].title %>
+        </h1>
+        <h3 class='lede'>
+          <em><%= @projects[-1].subtitle %></em> 
+        </h3>
+        <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img" %>
+      </div>
+      <div class="col-md">
+        <p>
+          <%= @projects[-1].text %>
+        </p>
+      </div>
+    </div>
+    <br>
     <%= link_to about_projects_path do %>
-      Coming soon <i class="fas fa-arrow-right"></i>
+      See More <i class="fas fa-arrow-right"></i>
     <% end %>
   </div>
 </div>
@@ -43,13 +59,18 @@
           <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
           <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
           <p>
-            <span class="author">Author Name</span><br>
-            <span class="lede">07/23</span>
+            <span class="lede author">
+              <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
+                Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %> 
+              <% else %>
+                <%= @blogs[@count - 1].created_at.to_s[5,5] %> 
+              <% end %>
+            </span>
           </p>
         <% end %>
       </div>
     </div>
-    
+    <br>
     <%= link_to blogs_path do %>
       More blog posts <i class="fas fa-arrow-right"></i>
     <% end %>

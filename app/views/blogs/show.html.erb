@@ -3,8 +3,13 @@
     <p id="notice"><%= notice %></p>
     
     <p>
-      <span class="author">Author Name</span>&nbsp;
-      <span class="lede">07/23</span>
+      <span class="lede author">
+      <% if @blog.updated_at > @blog.created_at %>
+        Updated <%= @blog.updated_at.to_s[5,5] %> 
+      <% else %>
+        <%= @blog.created_at.to_s[5,5] %> 
+      <% end %>
+      </span>
     </p>
     <h1 class="headline"><%= @blog.title %></h1>
     <h4 class="lede"><%= @blog.subtitle %></h4>
