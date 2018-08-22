@@ -1,18 +1,118 @@
+<div style="width:100%" id="main_featurette">
+  <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
+    <h1 class="featurette-heading">
+      We Are Code for PDX.
+    </h1>
+    <p class="lead">
+      As a Code for America Brigade, 
+      we're part of a national network of civic-minded volunteers 
+      who contribute their skills toward using the web 
+      as a platform for local government and community service. 
+      Let’s all build it together.
+    </p>
+    <h1 class="featurette-heading">
+      <i class="fas fa-code"></i>
+    </h1>
+  </div>
+</div>
 
-        <hr class="featurette-divider">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
+  <div class="container">
+    <h3>Projects:</h3>
+    <div class="row project-box">
+      <div class="col-md-4">
+        <h1 class='headline'>
+          <%= @projects[-1].title %>
+        </h1>
+        <h3 class='lede'>
+          <em><%= @projects[-1].subtitle %></em> 
+        </h3>
+        <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img" %>
+      </div>
+      <div class="col-md">
+        <p>
+          <%= @projects[-1].text %>
+        </p>
+      </div>
+    </div>
+    <br>
+    <%= link_to about_projects_path do %>
+      See More <i class="fas fa-arrow-right"></i>
+    <% end %>
+  </div>
+</div>
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
+<hr class="featurette-divider">
 
-        <hr class="featurette-divider">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+  <div class="container">
+    <h3>Blog:</h3>
+    
+    <div class="row featurette blog">
+      <div class="col-lg-8">
+        <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
+          <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"img-fluid mx-auto latest-post-img"  %>
+        <% end %>
+      </div>
+      <div class="col-lg">
+        <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
+          <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
+          <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
+          <p>
+            <span class="lede author">
+              <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
+                Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %> 
+              <% else %>
+                <%= @blogs[@count - 1].created_at.to_s[5,5] %> 
+              <% end %>
+            </span>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <%= link_to blogs_path do %>
+      More blog posts <i class="fas fa-arrow-right"></i>
+    <% end %>
+  </div>
+</div>
 
-        <!-- /END THE FEATURETTES -->
+<hr class="featurette-divider">
 
-      </div><!-- /.container -->
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+  <div class="container contact">
+    <h3>Get In Touch:</h3>
+    <p>
+      <i class="far fa-check-square"></i> 
+      Get started easily with our 
+      <%= link_to 'Quick Start Guide', quickstart_path %>.
+    </p>
+    <p>
+      <i class="fab fa-twitter-square"></i>
+      Keep up with us on 
+      <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank' %>
+    </p>
+    <p>
+      <i class="fab fa-github-square"></i> 
+      Fork and modify our projects on 
+      <%= link_to 'Github', 'https://github.com/codeforpdx', target: '_blank' %>.
+    </p>
+    <p>
+      <i class="fab fa-slack"></i> 
+      Join the discussion! Chat with us on 
+      <%= link_to 'Slack', 'https://codeforpdx.slack.com/', target: '_blank' %>.
+    </p>
+    <p>
+      <i class="fab fa-meetup"></i>
+      Come to a meetup! Join us on 
+      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank' %> 
+      for the updates on when and where we're meeting.
+    </p>
+  </div>
+</div>
+
+<!-- /END THE FEATURETTES -->
+<!-- 
+<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+-->
+

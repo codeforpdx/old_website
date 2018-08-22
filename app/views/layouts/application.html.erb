@@ -3,28 +3,27 @@
   <head>
     <title>Code for PDX</title>
     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content=<%= @seo_keywords %> />
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="carousel.css" rel="stylesheet">
+    <!-- link to fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Google fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Roboto+Slab:700|Lato:300|Merriweather:300" rel="stylesheet">
   </head>
 
-
   <body>
-
-      <%= render '/shared/header' %>
-
-      <main role="main">
-
+    <%= render '/shared/header' %>
+    
+    <main role="main">
       <%= yield %>
-
-      <%= render 'shared/footer' %>
-
-     </main>
-
+    </main>
+    
+    <%= render 'shared/footer' %>
   </body>
 </html>
 

@@ -17,3 +17,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# ignore cal's todo list
+todo.txt

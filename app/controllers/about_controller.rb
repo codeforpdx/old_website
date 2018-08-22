@@ -12,6 +12,7 @@ class AboutController < ApplicationController
   end
 
   def projects
+    @projects = Project.all
   end
 
   def vision
@@ -21,6 +22,7 @@ class AboutController < ApplicationController
   end
 
   def who
+    @teammates = Teammate.all
   end
 
 end

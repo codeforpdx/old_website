@@ -1,5 +1,33 @@
+<hr class="featurette-divider">
+
 <footer class="blog-footer">
-
- <%= copyright_generator %>
-
+  <div class="container contact" style="text-align:center">
+    <p>
+      Questions? 
+      <%= mail_to 'cal@codeforpdx.org', 'Email Me' %>
+    </p>
+    <p class="spaced">
+      <%= link_to 'https://twitter.com/codeforpdx' do %>
+        <i class="fab fa-twitter-square"></i>
+      <% end %>
+      <%= link_to 'https://www.meetup.com/Code-for-PDX/' do %>
+        <i class="fab fa-meetup"></i>
+      <% end %>
+      <%= link_to 'https://codeforpdx.slack.com' do %>
+        <i class="fab fa-slack"></i> 
+      <% end %>
+    </p>
+    <p>
+      <%= copyright_generator %>
+    </p>
+  </div>
+  <script>
+    $(function() {
+      $('body').on('click.hideNav', function(e) {
+        if (!$(e.target).hasClass('nav-link')) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      })
+    })
+  </script>
 </footer>
