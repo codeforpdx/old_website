@@ -20,3 +20,5 @@
 
 # ignore cal's todo list
 todo.txt
+
+.env

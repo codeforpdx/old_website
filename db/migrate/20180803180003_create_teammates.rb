@@ -7,7 +7,7 @@ class CreateTeammates < ActiveRecord::Migration[5.1]
       t.string :github
       t.text :bio
       t.text :img
-      
+
       t.timestamps
     end
   end
