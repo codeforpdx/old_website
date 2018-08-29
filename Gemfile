@@ -77,6 +77,7 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 #for twitter
 
+#authentication
 gem 'devise', '~> 4.5'
 
 gem 'omniauth', '~> 1.8', '>= 1.8.1'

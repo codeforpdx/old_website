@@ -27,7 +27,9 @@
       <% end %>
 
       <% unless current_teammate %>
-      <%= link_to "Sign in via Facebook", teammate_facebook_omniauth_authorize_path %>
+      <%= link_to "Sign in with Facebook", teammate_facebook_omniauth_authorize_path %>
+      <%= link_to "Sign in with Twitter", teammate_twitter_omniauth_authorize_path %>
+      <%= link_to "Sign in with Github", teammate_github_omniauth_authorize_path %>
       <% else %>
         <%= link_to "Logout", destroy_teammate_session_path, method: :delete %>
       <% end %>
