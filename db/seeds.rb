@@ -21,14 +21,14 @@ end
     subtitle: "Subtitle for this project",
     text: "This project is a project we've worked on...",
     img: "pdx.jpg"
-    )  
+    )
 end
 
-Teammate.create!(
-  name: "Cal Tissue",
-  email: "cal@codeforpdx.org",
-  twitter: "https://twitter.com/caltal_",
-  github: "https://github.com/caltissue",
-  img: "pdx.jpg",
-  bio: "Cal is the webmaster for Code for PDX. He comes from Charlotte, NC, originally."
-  )
+# Teammate.create!(
+#   name: "Cal Tissue",
+#   email: "cal@codeforpdx.org",
+#   twitter: "https://twitter.com/caltal_",
+#   github: "https://github.com/caltissue",
+#   img: "pdx.jpg",
+#   bio: "Cal is the webmaster for Code for PDX. He comes from Charlotte, NC, originally."
+#   )
