@@ -127,11 +127,11 @@ module ApplicationHelper
 
   def about_helper style, tag_type
     about_links = ""
-    
+
     about_items.each do |item|
       about_links << "<#{tag_type}"
     end
-    
+
     about_links.html_safe
   end
 
@@ -168,6 +168,7 @@ module ApplicationHelper
   def nav_helper style, tag_type
     array_to_html nav_items, style, tag_type
   end
+
 
   def alerts
   alert = ( flash[:alert] || flash[:error] || flash[:notice] )

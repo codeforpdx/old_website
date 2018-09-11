@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "gritter";
+// @import "font-awesome";
 
 #main_featurette {
     background-image: image-url('portland.jpg');
@@ -19,8 +20,8 @@
         color: white;
         text-shadow: -2px 1px #000;
     }
-    @media (min-width: 768px) { 
-        margin-top: 125px; 
+    @media (min-width: 768px) {
+        margin-top: 125px;
         max-height: 275px;
     }
     @media (max-width: 767px) {
@@ -44,7 +45,7 @@
 }
 
 .contact {
-    p { 
+    p {
         margin-top: 20px;
         margin-bottom: 10px;
         i {

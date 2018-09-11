@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // about#who
+// 
+// @import "font-awesome";
+
 .topper {
     margin-top: 40px;
 }
@@ -13,8 +16,8 @@ p {
 .member-box {
     margin-top: 50px;
     text-align: center;
-    p { 
-        font-size: 18px; 
+    p {
+        font-size: 18px;
         text-align: left;
     }
     .member-links { font-size: 30px; }

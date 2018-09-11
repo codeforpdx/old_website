@@ -1,18 +1,37 @@
 <header>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <%= link_to root_path, class: 'navbar-brand offset-lg-1 offset-xl-2' do %>
-    <%= image_tag "logo", size: "50x50", alt: "logo" %> 
+    <%= image_tag "logo", size: "50x50", alt: "logo" %>
     Code for PDX
   <% end %>
-  
+
   <button style="right:0px" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button> 
+  </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      
+
       <%= nav_helper 'nav-item nav-link', 'li' %>
-      
+
+      <% unless current_teammate %>
+      <!-- TODO: get these to work with font awesome.  -->
+        <li class="nav-item nav-link">
+          Sign in:
+            <%= link_to (image_tag "facebook.png", alt: "Sign in with Facebook", size: "30x30"), teammate_facebook_omniauth_authorize_path %>
+          <%= link_to (image_tag "github.png", alt: "Sign in with Facebook", size: "30x30"), teammate_github_omniauth_authorize_path %>
+        </li>
+      <% else %>
+          <li class="nav-item nav-link">
+          <%= image_tag current_teammate.image, alt: current_teammate.name, height: "40px", width: "40px" %>
+           <%= current_teammate.name %>
+         </li>
+          <br>
+          <li class="nav-item nav-link">
+            <i class='far fa-door-open'></i>&nbsp;
+            <%= link_to (fa_icon "sign-out"), destroy_teammate_session_path, method: :delete %>
+
+          </li>
+      <% end %>
     </ul>
   </div>
 </nav>

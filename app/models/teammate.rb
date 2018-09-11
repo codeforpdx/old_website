@@ -2,13 +2,11 @@ class Teammate < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, :omniauth_providers => [:facebook, :twitter, :github]
+         :recoverable, :rememberable, :validatable, :omniauthable, :omniauth_providers => [:facebook, :github]
 
   def self.new_with_session(params, session)
     super.tap do |teammate|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        teammate.email = data["email"] if teammate.email.blank?
-      elsif data = session["devise.twitter_data"] && session["devise.twitter_data"]["extra"]["raw_info"]
         teammate.email = data["email"] if teammate.email.blank?
       elsif data = session["devise.github_data"] && session["devise.github_data"]["extra"]["raw_info"]
           teammate.email = data["email"] if teammate.email.blank?
