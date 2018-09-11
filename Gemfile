@@ -75,17 +75,15 @@ gem 'gritter', '~> 1.2'
 #for notifications
 
 gem 'twitter', '~> 6.2'
-#for twitter
-<<<<<<< HEAD
-=======
 
-gem 'devise', '~> 4.5'
 
-gem 'omniauth', '~> 1.8', '>= 1.8.1'
-
-gem 'omniauth-twitter', '~> 1.4'
-
-gem 'omniauth-github', '~> 1.3'
-
-gem 'omniauth-facebook', '~> 5.0'
->>>>>>> parent of 4f0e08b... added omniauth for github
+#
+# gem 'devise', '~> 4.5'
+#
+# # gem 'omniauth', '~> 1.8', '>= 1.8.1'
+# #
+# # gem 'omniauth-twitter', '~> 1.4'
+# #
+# # gem 'omniauth-github', '~> 1.3'
+# #
+# # gem 'omniauth-facebook', '~> 5.0'
