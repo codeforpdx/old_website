@@ -20,3 +20,5 @@
 
 # ignore cal's todo list
 todo.txt
+omni_auth_template.rb
+.env
