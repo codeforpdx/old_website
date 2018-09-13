@@ -1,0 +1,55 @@
+
+<%= form_with(model: volunteer, local: true) do |form| %>
+  <% if volunteer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(volunteer.errors.count, "error") %> prohibited this Volunteer Application from being saved:</h2>
+
+      <ul>
+      <% volunteer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <% if current_page? new_volunteer_path %>
+      <%= form.select(:project) do %>
+        <% @project.each do |c| %>
+          <%= content_tag(:option, c.title, value: c.title, class: 'form-control')%>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= form.label :idea %>
+      <%= form.text_area :idea, id: :idea, class: "form-control" %>
+
+      <%= form.label :details %>
+      <%= form.text_area :details, id: :idea, class: "form-control" %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+  <% if current_page? new_volunteer_path %>
+    <%= form.select(:role) do %>
+      <% ["Project Manager","Project Organizer", "Project Volunteer"].each do |c| -%>
+        <%= content_tag(:option, c, value: c, class: 'form-control')%>
+      <% end %>
+    <% end %>
+  <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: 'btn btn-primary btn-block' %>
+  </div>
+
+<% end %>
