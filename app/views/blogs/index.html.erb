@@ -1,11 +1,11 @@
 <div class="container col-md-8 offset-md-2 topper">
-  <div class="container"> 
+  <div class="container">
     <p id="notice"><%= notice %></p>
-    
+
     <div id="latest-blogpost">
       <h3 class="lede">Latest</h3>
       <hr>
-      
+
       <div class="row featurette">
         <div class="col-lg-8">
           <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
@@ -19,9 +19,9 @@
             <p>
               <span class="lede author">
                 <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
-                  Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %> 
+                  Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %>
                 <% else %>
-                  <%= @blogs[@count - 1].created_at.to_s[5,5] %> 
+                  <%= @blogs[@count - 1].created_at.to_s[5,5] %>
                 <% end %>
               </span>
             </p>
@@ -29,7 +29,9 @@
         </div>
       </div>
     </div>
-    
+
+
+
     <% if @blogs.count >= 4 %>
     <div id="next-three-blogposts" class="row featurette topper">
       <% 3.times do |i| %>
@@ -42,9 +44,9 @@
             <p>
               <span class="lede author">
                 <% if @blogs[count].updated_at > @blogs[count].created_at %>
-                  Updated <%= @blogs[count].updated_at.to_s[5,5] %> 
+                  Updated <%= @blogs[count].updated_at.to_s[5,5] %>
                 <% else %>
-                  <%= @blogs[count].created_at.to_s[5,5] %> 
+                  <%= @blogs[count].created_at.to_s[5,5] %>
                 <% end %>
               </span>
             </p>
@@ -53,7 +55,7 @@
       <% end %>
     </div>
     <% end %>
-    
+
     <% if @blogs.count >= 7 %>
     <div id="next-three-blogposts" class="row featurette">
       <% 3.times do |i| %>
@@ -66,10 +68,10 @@
             <p>
               <span class="lede author">
                 <% if @blogs[count].updated_at > @blogs[count].created_at %>
-                  Updated <%= @blogs[count].updated_at.to_s[5,5] %> 
+                  Updated <%= @blogs[count].updated_at.to_s[5,5] %>
                 <% else %>
-                  <%= @blogs[count].created_at.to_s[5,5] %> 
-                <% end %> 
+                  <%= @blogs[count].created_at.to_s[5,5] %>
+                <% end %>
               </span>
             </p>
           <% end %>

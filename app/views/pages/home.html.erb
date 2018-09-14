@@ -1,13 +1,13 @@
 <div style="width:100%" id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading">
-      We Are Code for PDX.
+      Code for PDX.
     </h1>
     <p class="lead">
-      As a Code for America Brigade, 
-      we're part of a national network of civic-minded volunteers 
-      who contribute their skills toward using the web 
-      as a platform for local government and community service. 
+      As a Code for America Brigade,
+      we're part of a national network of civic-minded volunteers
+      who contribute their skills toward using the web
+      as a platform for local government and community service.
       Let’s all build it together.
     </p>
     <h1 class="featurette-heading">
@@ -25,7 +25,7 @@
           <%= @projects[-1].title %>
         </h1>
         <h3 class='lede'>
-          <em><%= @projects[-1].subtitle %></em> 
+          <em><%= @projects[-1].subtitle %></em>
         </h3>
         <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img" %>
       </div>
@@ -41,13 +41,40 @@
     <% end %>
   </div>
 </div>
+<hr class="featurette-divider">
+<div class="row featurette">
+
+      <div class="col-lg-12">
+        <div class="container contact text-center">
+          <h3>We connect civic technologists with project leaders who have ideas for community solutions.</h3>
+          <p>
+
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center" >
+        <h1 style="font-size: 500%;">
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </h1>
+        <%= link_to "I Want to Volunteer", new_volunteer_path, class: "btn btn-primary btn-lg" %>
+      </div>
+      <div class="col-lg-6 text-center">
+        <h1 style="font-size: 500%;">
+        <i class="fas fa-project-diagram"></i>
+      </h1>
+        <%= link_to "I Have an Idea", volunteers_propose_path, class: 'btn btn-primary btn-lg' %>
+      </div>
+
+
+</div>
+</div>
 
 <hr class="featurette-divider">
 
 <div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
   <div class="container">
     <h3>Blog:</h3>
-    
+
     <div class="row featurette blog">
       <div class="col-lg-8">
         <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
@@ -61,9 +88,9 @@
           <p>
             <span class="lede author">
               <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
-                Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %> 
+                Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %>
               <% else %>
-                <%= @blogs[@count - 1].created_at.to_s[5,5] %> 
+                <%= @blogs[@count - 1].created_at.to_s[5,5] %>
               <% end %>
             </span>
           </p>
@@ -83,36 +110,35 @@
   <div class="container contact">
     <h3>Get In Touch:</h3>
     <p>
-      <i class="far fa-check-square"></i> 
-      Get started easily with our 
+      <i class="far fa-check-square"></i>
+      Get started easily with our
       <%= link_to 'Quick Start Guide', quickstart_path %>.
     </p>
     <p>
       <i class="fab fa-twitter-square"></i>
-      Keep up with us on 
+      Keep up with us on
       <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank' %>
     </p>
     <p>
-      <i class="fab fa-github-square"></i> 
-      Fork and modify our projects on 
+      <i class="fab fa-github-square"></i>
+      Fork and modify our projects on
       <%= link_to 'Github', 'https://github.com/codeforpdx', target: '_blank' %>.
     </p>
     <p>
-      <i class="fab fa-slack"></i> 
-      Join the discussion! Chat with us on 
+      <i class="fab fa-slack"></i>
+      Join the discussion! Chat with us on
       <%= link_to 'Slack', 'https://codeforpdx.slack.com/', target: '_blank' %>.
     </p>
     <p>
       <i class="fab fa-meetup"></i>
-      Come to a meetup! Join us on 
-      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank' %> 
+      Come to a meetup! Join us on
+      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank' %>
       for the updates on when and where we're meeting.
     </p>
   </div>
 </div>
 
 <!-- /END THE FEATURETTES -->
-<!-- 
+<!--
 <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
 -->
-
