@@ -107,6 +107,12 @@ module ApplicationHelper
       target: "_self",
       iclass: 'fas fa-rss'
     },
+    {
+      url: "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX",
+      title: "Donate",
+      target: "_self",
+      iclass: 'fas fa-donate'
+    }
     #{
     #  url: contact_path,
     #  title: "Contact",
@@ -127,11 +133,11 @@ module ApplicationHelper
 
   def about_helper style, tag_type
     about_links = ""
-    
+
     about_items.each do |item|
       about_links << "<#{tag_type}"
     end
-    
+
     about_links.html_safe
   end
 
