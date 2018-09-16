@@ -19,8 +19,8 @@
         color: white;
         text-shadow: -2px 1px #000;
     }
-    @media (min-width: 768px) { 
-        margin-top: 125px; 
+    @media (min-width: 768px) {
+        margin-top: 125px;
         max-height: 275px;
     }
     @media (max-width: 767px) {
@@ -44,7 +44,7 @@
 }
 
 .contact {
-    p { 
+    p {
         margin-top: 20px;
         margin-bottom: 10px;
         i {
@@ -58,4 +58,24 @@
         margin-left: 15px;
         margin-right: 15px;
     }
+}
+.main-title {
+  transform:skewY(175deg);
+  margin: auto;
+  margin-bottom: 10px;
+  width: 70%;
+  text-align: center;
+  font-size: 6rem;
+  border: 5px solid white;
+  border-radius: 10px;
+  //-webkit-text-stroke-width: 3px;
+  //-webkit-text-stroke-color: black;
+}
+.subtitle-text{
+  transform:skewY(175deg);
+  padding: 15px;
+  border-radius: 5px;
+}
+.title-button{
+  padding: 30px;
 }

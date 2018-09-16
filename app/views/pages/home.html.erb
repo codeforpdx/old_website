@@ -1,4 +1,4 @@
-<div style="width:100%" id="main_featurette">
+<!-- <div style="width:100%" id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading">
       Code for PDX.
@@ -14,11 +14,68 @@
       <i class="fas fa-code"></i>
     </h1>
   </div>
+</div> -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "portland", alt: "Code for PDX", class: "first-slide" %>
+      <div class="container" >
+        <div class="carousel-caption">
+          <h1 class="featurette-heading main-title">Code for PDX</h1>
+          <p class="lead text-left subtitle-text">As a Code for America Brigade,
+          we're part of a national network of civic-minded volunteers
+          who contribute their skills toward using the web
+          as a platform for local government and community service.
+          Let’s all build it together.
+        </p>
+          <%= link_to "Sign up today", about_projects_path, class:"btn btn-lg btn-primary title-button", role: "button" %>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag  @projects[-1].img, alt: @projects[-1].title, class:"second-slide" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Check out our Current Projects: </h1>
+          <h2>Project: <%= @projects[-1].title %></h2>
+          <p><%= @projects[-1].text %></p>
+          <%= link_to "Learn More", about_projects_path, class:"btn btn-lg btn-primary", role:"button"  %>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"third-slide"%>
+      <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption text-right">
+          <h1><%= @blogs[@count - 1].title %></h1>
+          <h2><%= @blogs[@count - 1].subtitle %></h2>
+          <p><%= @blogs[@count -1].text %></p>
+
+          <p>
+            <%= link_to  "Read More","/blogs/#{@blogs[@count-1].id}", class:"btn btn-lg btn-primary", role:"button"  %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 <div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
   <div class="container">
-    <h3>Projects:</h3>
+    <h3>Current Projects:</h3>
     <div class="row project-box">
       <div class="col-md-4">
         <h1 class='headline'>
@@ -135,6 +192,17 @@
       for the updates on when and where we're meeting.
     </p>
   </div>
+  <hr class="featurette-divider">
+<div class="col-lg 12 text-center">
+  <p class="text-center">
+    Our Supporters.
+    We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
+    While Code for America subsidizes our operating costs,
+    if Code for PDX is to continue its mission we will soon need the financial support of local sponsors,
+    By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
+    Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
+  </p>
+</div>
   <div class="col-lg 12 text-center">
     <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "btn btn-primary btn-lg" %>
   </div>
