@@ -32,3 +32,14 @@ Teammate.create!(
   img: "pdx.jpg",
   bio: "Cal is the webmaster for Code for PDX. He comes from Charlotte, NC, originally."
   )
+
+Meeting.create!(
+  title: "Project Launch!",
+  subtitle: "Project slate for Fall/Winter 2018",
+  location: "WeWork Pioneer Place 700 SW 5th Avenue · Portland, OR",
+  eventstart: Time.now.end_of_day,
+  timeofevent: "6:00 pm = 8:00 pm PST",
+  url: "https://www.meetup.com/Code-for-PDX/events/254426747/",
+  body: "This will be the official launch of Code for PDX. We have so much to share with you folks! We will introduce our first projects, our partners, and talk about our process.",
+  googlemapurl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5808048833073!2d-122.67938374889914!3d45.51851657899902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a059fff9feb%3A0xbd2c732601e329e!2sWeWork+Pioneer+Place!5e0!3m2!1sen!2sus!4v1537332965503"
+)

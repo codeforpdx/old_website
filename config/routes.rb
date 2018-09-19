@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :meetings
   resources :blogs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   get 'volunteers/propose', to: 'volunteers#propose'
 
   resources :volunteers, except: [:index, :edit]
+  
   root to: 'pages#home'
 
   get 'volunteers/propose', to: 'volunteers#propose'

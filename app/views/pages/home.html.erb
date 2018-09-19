@@ -19,6 +19,7 @@
 </div>
 <div class="row featurette background_white featurette_main">
   <div class="container text-left">
+    <% if @meeting %>
     <div class="row">
       <div class="col-lg-8">
     <h1 class="text_color"> Next Meeting: <%= @meeting.title %> </h1>
@@ -40,6 +41,17 @@
       </iframe>
     </div>
   </div>
+  <% else %>
+  <div class="row">
+    <div class="col-lg-12">
+  <h1 class="text_color"> Next Meeting: To Be Announced </h1>
+  <h2 class=>Biweekly Hackathons: TBA </h2>
+  <p> Checkout our projects!</p>
+
+  </div>
+
+</div>
+  <% end %>
 </div>
 </div>
 
