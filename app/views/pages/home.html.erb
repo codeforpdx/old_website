@@ -21,7 +21,7 @@
   <div class="container text-left">
     <div class="row">
       <div class="col-lg-8">
-    <h1 class="text_color"> Next Meeting <%= @meeting.title %> </h1>
+    <h1 class="text_color"> Next Meeting: <%= @meeting.title %> </h1>
     <h2 class="text_color">Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
     <h2 class=><%= @meeting.location %> </h2>
     <p> This will be the official launch of Code for PDX.

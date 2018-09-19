@@ -11,39 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :meeting_title %>
+    <%= form.text_field :title, id: :meeting_title, class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, id: :meeting_subtitle %>
+    <%= form.text_field :subtitle, id: :meeting_subtitle, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
-    <%= form.text_area :location, id: :meeting_location %>
+    <%= form.text_area :location, id: :meeting_location, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :eventstart %>
-    <%= form.datetime_select :eventstart, id: :meeting_eventstart %>
+    <%= form.datetime_select :eventstart, id: :meeting_eventstart, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :timeofevent %>
-    <%= form.text_field :timeofevent, id: :meeting_timeofevent %>
+    <%= form.text_field :timeofevent, id: :meeting_timeofevent, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :url %>
-    <%= form.text_area :url, id: :meeting_url %>
+    <%= form.text_area :url, id: :meeting_url, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :meeting_body %>
+    <%= form.text_area :body, id: :meeting_body, class: 'form-control' %>
   </div>
 
   <div class="actions">
