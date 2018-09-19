@@ -15,13 +15,13 @@
               )
 end
 
-2.times do |project|
+3.times do |project|
   Project.create!(
     title: "Project Title #{project}",
     subtitle: "Subtitle for this project",
     text: "This project is a project we've worked on...",
     img: "pdx.jpg"
-    )  
+    )
 end
 
 Teammate.create!(

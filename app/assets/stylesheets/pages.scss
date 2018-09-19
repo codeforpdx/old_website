@@ -59,23 +59,124 @@
         margin-right: 15px;
     }
 }
-.main-title {
+
+
+#main-title {
   transform:skewY(175deg);
   margin: auto;
   margin-bottom: 10px;
   width: 70%;
   text-align: center;
-  font-size: 6rem;
+  font-size: 4.5rem;
   border: 5px solid white;
   border-radius: 10px;
   //-webkit-text-stroke-width: 3px;
   //-webkit-text-stroke-color: black;
 }
-.subtitle-text{
+
+#subtitle-text{
   transform:skewY(175deg);
   padding: 15px;
   border-radius: 5px;
 }
 .title-button{
   padding: 30px;
+}
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.card-height {
+  padding-top: 70px;
+  max-width: 500px;
+  min-height: 300px;
+}
+
+.featurette_main{
+  padding-top: 60px;
+  padding: 60px;
+  min-height: 300px;
+}
+
+.text_white{
+  color: white;
+}
+.background_xparent{
+  background-color: rgba(164,173,213, 0.3);
+  border-radius: 5px;
+
+}
+
+.text_color{
+  color: #340086;
+}
+
+.text_pink{
+  color:#EA6AB7;
+}
+
+.text_red{
+  color: #F70023;
+}
+
+.text_greenblue{
+  color:#00B3A7;
+}
+.background_image{
+  background-image: url('pdx_night.jpg');
+}
+
+.background_image_pdx{
+  background-image: url('pdx_meetup.jpg');
+}
+
+.background_darkblue{
+  background-color: #340086;
+}
+
+.background_white{
+  background-color: #ffff;
+}
+
+.background_greenblue{
+  background-color: #00B3A7;
+}
+.background_pink{
+  background-color: #EA6AB7;
+}
+
+.background_lightblue{
+  background-color: #96BFE5;
+}
+
+.background_red{
+  background-color: #F70023;
+}
+
+.rounded{
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  #main-title {
+      transform:skewY(180deg);
+      font-size: 3rem;
+    }
+  #subtitle-text {
+    transform:skewY(180deg);
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #main-title {
+      transform:skewY(180deg);
+      font-size: 2rem;
+    }
+  #subtitle-text {
+    transform:skewY(180deg);
+    font-size: 1em;
+  }
 }

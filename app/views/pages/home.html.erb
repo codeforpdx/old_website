@@ -1,9 +1,11 @@
-<!-- <div style="width:100%" id="main_featurette">
+
+
+<div style="width:100%" id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
-    <h1 class="featurette-heading">
+    <h1 class="featurette-heading" id="main-title">
       Code for PDX.
     </h1>
-    <p class="lead">
+    <p class="lead"  id="subtitle-text">
       As a Code for America Brigade,
       we're part of a national network of civic-minded volunteers
       who contribute their skills toward using the web
@@ -11,123 +13,113 @@
       Let’s all build it together.
     </p>
     <h1 class="featurette-heading">
-      <i class="fas fa-code"></i>
+      < />
     </h1>
   </div>
-</div> -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag "portland", alt: "Code for PDX", class: "first-slide" %>
-      <div class="container" >
-        <div class="carousel-caption">
-          <h1 class="featurette-heading main-title">Code for PDX</h1>
-          <p class="lead text-left subtitle-text">As a Code for America Brigade,
-          we're part of a national network of civic-minded volunteers
-          who contribute their skills toward using the web
-          as a platform for local government and community service.
-          Let’s all build it together.
-        </p>
-          <%= link_to "Sign up today", about_projects_path, class:"btn btn-lg btn-primary title-button", role: "button" %>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag  @projects[-1].img, alt: @projects[-1].title, class:"second-slide" %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Check out our Current Projects: </h1>
-          <h2>Project: <%= @projects[-1].title %></h2>
-          <p><%= @projects[-1].text %></p>
-          <%= link_to "Learn More", about_projects_path, class:"btn btn-lg btn-primary", role:"button"  %>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"third-slide"%>
-      <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-      <div class="container">
-        <div class="carousel-caption text-right">
-          <h1><%= @blogs[@count - 1].title %></h1>
-          <h2><%= @blogs[@count - 1].subtitle %></h2>
-          <p><%= @blogs[@count -1].text %></p>
-
-          <p>
-            <%= link_to  "Read More","/blogs/#{@blogs[@count-1].id}", class:"btn btn-lg btn-primary", role:"button"  %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
-<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
-  <div class="container">
-    <h3>Current Projects:</h3>
-    <div class="row project-box">
-      <div class="col-md-4">
-        <h1 class='headline'>
-          <%= @projects[-1].title %>
-        </h1>
-        <h3 class='lede'>
-          <em><%= @projects[-1].subtitle %></em>
-        </h3>
-        <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img" %>
-      </div>
-      <div class="col-md">
-        <p>
-          <%= @projects[-1].text %>
-        </p>
-      </div>
-    </div>
-    <br>
-    <%= link_to about_projects_path do %>
-      See More <i class="fas fa-arrow-right"></i>
-    <% end %>
-  </div>
+<div class="row featurette background_white featurette_main">
+  <div class="container text-center">
+    <h1 class="text_color">Our Next meeting is September 19, 2018</h1>
+    <h4 class="text-center"> This will be the official launch of Code for PDX.
+      We have so much to share with you folks!
+      We will introduce our first projects, our partners, and talk about our process.</h4>
+    <%= link_to "RSVP NOW!", "https://www.meetup.com/Code-for-PDX/events/254426747/", class:"btn btn-lg background_darkblue" %>
 </div>
-<hr class="featurette-divider">
-<div class="row featurette">
 
-      <div class="col-lg-12">
-        <div class="container contact text-center">
-          <h3>We connect civic technologists with project leaders who have ideas for community solutions.</h3>
+</div>
 
-        </div>
-      </div>
-
-      <div class="col-lg-6 text-center" >
+<div class="row featurette featurette_main background_image text_white">
+  <div class="container text-center">
+    <h4>We connect civic technologists with project leaders who have ideas for community solutions.</h4>
+    <div class="row">
+    <div class="col-md-6">
+      <div class="mb-4 box-shadow text-center card-height  background_xparent rounded text_white">
         <h1 style="font-size: 500%;">
         <i class="fa fa-user-plus" aria-hidden="true"></i>
       </h1>
-        <%= link_to "I Want to Volunteer", new_volunteer_path, class: "btn btn-primary btn-lg" %>
-      </div>
-      <div class="col-lg-6 text-center">
-        <h1 style="font-size: 500%;">
-        <i class="fas fa-project-diagram"></i>
-      </h1>
-        <%= link_to "I Have an Idea", volunteers_propose_path, class: 'btn btn-primary btn-lg' %>
-      </div>
+        <div class="card-body">
+          <%= link_to "I Want to Volunteer", new_volunteer_path, class: "btn background_darkblue btn-block btn-lg " %>
+          <div class="d-flex justify-content-between align-items-center">
 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="mb-4 box-shadow text-center card-height  background_xparent rounded text_white">
+            <h1 style="font-size: 500%;">
+            <i class="fas fa-project-diagram"></i>
+          </h1>
+            <div class="card-body">
+              <%= link_to "I Have an Idea", volunteers_propose_path, class: "btn background_darkblue btn-block btn-lg " %>
+              <div class="d-flex justify-content-between align-items-center">
+
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
 
 </div>
+
+<div class="row featurette featurette_main background_xparent text_color">
+
+  <hr class="featurette-divider background_pink">
+  <div class="container">
+    <h3>Checkout Our Current Projects!</h3>
+    <div class="row">
+    <div class="col-md-4">
+      <div class="mb-4 box-shadow">
+        <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
+        <div class="card-body background_white rounded">
+          <h3>
+          <%= @projects[-1].title %>
+        </h3>
+          <p class="card-text"><%= @projects[-1].subtitle %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text_red">Fall/Winter 2018</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="mb-4 box-shadow">
+        <%= image_tag @projects[-2].img, alt: @projects[-2].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
+        <div class="card-body background_white rounded">
+          <h3>
+          <%= @projects[-2].title %>
+        </h3>
+          <p class="card-text"><%= @projects[-2].subtitle %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text_red">Fall/Winter 2018</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="mb-4 box-shadow">
+        <%= image_tag @projects[-3].img, alt: @projects[-3].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
+        <div class="card-body background_white rounded">
+          <h3>
+          <%= @projects[-3].title %>
+        </h3>
+          <p class="card-text"><%= @projects[-3].subtitle %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text_red">Fall/Winter 2018</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<hr class="featurette-divider">
+</div>
 
-<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+<div class="featurette_main background_white text_color">
+
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 ">
   <div class="container">
     <h3>Blog:</h3>
 
@@ -154,47 +146,47 @@
       </div>
     </div>
     <br>
-    <%= link_to blogs_path do %>
+    <%= link_to blogs_path  do %>
       More blog posts <i class="fas fa-arrow-right"></i>
     <% end %>
   </div>
 </div>
-
-<hr class="featurette-divider">
-
-<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+</div>
+<div class="container col-xl-12 background_darkblue text_white featurette_main">
   <div class="container contact">
     <h3>Get In Touch:</h3>
     <p>
-      <i class="far fa-check-square"></i>
+      <i class="far fa-check-square text_greenblue "></i>
       Get started easily with our
-      <%= link_to 'Quick Start Guide', quickstart_path %>.
+      <%= link_to 'Quick Start Guide', quickstart_path, class: "text_greenblue" %>.
     </p>
     <p>
-      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-twitter-square text_greenblue"></i>
       Keep up with us on
-      <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank' %>
+      <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank', class: "text_greenblue" %>
     </p>
     <p>
-      <i class="fab fa-github-square"></i>
+      <i class="fab fa-github-square text_greenblue"></i>
       Fork and modify our projects on
-      <%= link_to 'Github', 'https://github.com/codeforpdx', target: '_blank' %>.
+      <%= link_to 'Github', 'https://github.com/codeforpdx', target: '_blank', class: "text_greenblue"  %>.
     </p>
     <p>
-      <i class="fab fa-slack"></i>
+      <i class="fab fa-slack text_greenblue"></i>
       Join the discussion! Chat with us on
-      <%= link_to 'Slack', 'https://codeforpdx.slack.com/', target: '_blank' %>.
+      <%= link_to 'Slack', 'https://codeforpdx.slack.com/', target: '_blank', class: "text_greenblue" %>.
     </p>
     <p>
-      <i class="fab fa-meetup"></i>
+      <i class="fab fa-meetup text_greenblue"></i>
       Come to a meetup! Join us on
-      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank' %>
+      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank', class: "text_greenblue" %>
       for the updates on when and where we're meeting.
     </p>
   </div>
-  <hr class="featurette-divider">
-<div class="col-lg 12 text-center">
-  <p class="text-center">
+</div>
+
+<div class="col-lg 12 text-center background_white featurette_main">
+  <h1 class="text_color"> Support Code for PDX </h1>
+  <p>
     Our Supporters.
     We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
     While Code for America subsidizes our operating costs,
@@ -202,11 +194,12 @@
     By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
     Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
   </p>
-</div>
   <div class="col-lg 12 text-center">
-    <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "btn btn-primary btn-lg" %>
+    <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "btn background_greenblue btn-lg" %>
   </div>
-</div>
+
+
+
 
 <!-- /END THE FEATURETTES -->
 <!--
