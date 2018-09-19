@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-    access all: [:show, :index, :new, :propose], user: {except: [:destroy]}, site_admin: :all
+    access all: [:show, :index, :new, :propose], site_admin: :all
     before_action :set_volunteer, only: [:show, :edit, :update, :destroy]
     layout "application"
 
@@ -75,7 +75,7 @@ class VolunteersController < ApplicationController
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def volunteer_params
-        params.require(:volunteer).permit(:name, :email, :project, :role, :id)
+        params.require(:volunteer).permit(:name, :email, :project, :role, :id, :idea, :details)
       end
 
 end
