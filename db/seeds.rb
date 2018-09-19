@@ -25,6 +25,15 @@ end
 end
 
 Teammate.create!(
+  name: "Hugh Harker",
+  email: "hugh@codeforpdx.org",
+  twitter: "https://twitter.com/caltal_",
+  github: "https://github.com/caltissue",
+  img: "pdx.jpg",
+  bio: "Hugh is an former professional urbanist and developer. Hugh started Code for PDX in May of 2018. He comes from Cumberland, RI by way of Athens, GA."
+  )
+
+Teammate.create!(
   name: "Cal Tissue",
   email: "cal@codeforpdx.org",
   twitter: "https://twitter.com/caltal_",
@@ -32,6 +41,7 @@ Teammate.create!(
   img: "pdx.jpg",
   bio: "Cal is the webmaster for Code for PDX. He comes from Charlotte, NC, originally."
   )
+
 
 Meeting.create!(
   title: "Project Launch!",

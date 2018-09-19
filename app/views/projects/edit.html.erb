@@ -1,0 +1,9 @@
+<div class="container col-md-6 offset-md-3 topper">
+  <div class="container">
+    <h1>Editing project</h1>
+
+    <%= render 'form', project: @project %>
+
+    <%= link_to 'Discard edit', @project %> | <%= link_to 'Back to project home', projects_path %>
+  </div>
+</div>
