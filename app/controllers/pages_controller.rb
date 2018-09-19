@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @count = Blog.count
     @blogs = Blog.all
     @projects = Project.all
+    @meetings = Meeting.last
   end
 
   def quickstart
@@ -30,5 +31,15 @@ class PagesController < ApplicationController
   # def news_params
     # params.require(:news).permit(:title, :body)
   # end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_meeting
+      @meeting = Meeting.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def meeting_params
+      params.require(:meeting).permit(:title, :subtitle, :location, :eventstart, :timeofevent, :url, :body)
+    end
 
 end
