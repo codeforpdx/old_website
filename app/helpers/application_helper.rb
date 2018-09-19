@@ -183,7 +183,7 @@ module ApplicationHelper
   end
 
   def alert_generator msg
-    js add_gritter(msg, title: "Hugh Harker Portfolio")
+    js add_gritter(msg, title: "Code for PDX")
   end
 
 end
