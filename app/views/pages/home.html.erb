@@ -17,16 +17,30 @@
     </h1>
   </div>
 </div>
-
 <div class="row featurette background_white featurette_main">
-  <div class="container text-center">
-    <h1 class="text_color">Our Next meeting is September 19, 2018</h1>
-    <h4 class="text-center"> This will be the official launch of Code for PDX.
+  <div class="container text-left">
+    <div class="row">
+      <div class="col-lg-8">
+    <h1 class="text_color"> Next Meeting <%= @meeting.title %> </h1>
+    <h2 class="text_color">Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
+    <h2 class=><%= @meeting.location %> </h2>
+    <p> This will be the official launch of Code for PDX.
       We have so much to share with you folks!
-      We will introduce our first projects, our partners, and talk about our process.</h4>
-    <%= link_to "RSVP NOW!", "https://www.meetup.com/Code-for-PDX/events/254426747/", class:"btn btn-lg background_darkblue" %>
-</div>
+      We will introduce our first projects, our partners, and talk about our process.</p>
+      <%= link_to "RSVP NOW!", @meeting.url, class:"btn btn-lg btn-block background_red", target: "_blank" %>
 
+    </div>
+    <div class="col-lg-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5808048833073!2d-122.67938374889914!3d45.51851657899902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a059fff9feb%3A0xbd2c732601e329e!2sWeWork+Pioneer+Place!5e0!3m2!1sen!2sus!4v1537332965503"
+              width="400"
+              height="300"
+              frameborder="0"
+              style="border:0"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
 </div>
 
 <div class="row featurette featurette_main background_image text_white">

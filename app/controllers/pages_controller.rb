@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @count = Blog.count
     @blogs = Blog.all
     @projects = Project.all
-    @meetings = Meeting.last
+    @meeting = Meeting.last
   end
 
   def quickstart
