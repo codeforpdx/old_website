@@ -1,4 +1,5 @@
 class MeetingsController < ApplicationController
+  access all: [:show, :index], user: [:show, :index], site_admin: :all
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
   # GET /meetings

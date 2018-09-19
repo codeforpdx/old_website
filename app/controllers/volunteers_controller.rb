@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-
+    access all: [:show, :index, :new, :propose], user: {except: [:destroy]}, site_admin: :all
     before_action :set_volunteer, only: [:show, :edit, :update, :destroy]
     layout "application"
 
