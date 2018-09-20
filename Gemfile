@@ -81,6 +81,7 @@ gem 'devise', '~> 4.5'
 
 #for authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+#for env secret
 #
 # # gem 'omniauth', '~> 1.8', '>= 1.8.1'
 # #
