@@ -90,4 +90,4 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 # # gem 'omniauth-github', '~> 1.3'
 # #
 # # gem 'omniauth-facebook', '~> 5.0'
-ruby "2.3.3"
+ruby "2.3.7"
