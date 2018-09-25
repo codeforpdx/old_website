@@ -6,40 +6,110 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-2.times do |blog|
-  Blog.create!(
-                title: "Blog Title number #{blog}",
-                subtitle: "Blog Subtitle number #{blog}",
-                text: "This is a text example for a blog post, it can be longer than this",
-                img: "pdx.jpg"
-              )
-end
 
-3.times do |project|
-  Project.create!(
-    title: "Project Title #{project}",
-    subtitle: "Subtitle for this project",
-    text: "This project is a project we've worked on...",
-    img: "pdx.jpg"
-    )
-end
+Blog.create!(
+                title: "Welcome to the new CodeforPDX website!",
+                subtitle: "We are up and running!",
+                text: "Please stay tuned, there will be more shortly.",
+                img: "logo.jpg"
+              )
+
+Project.create!(
+  title: "Access2Justice: Commons Law Center",
+  subtitle: "Access to Justice: Family Housing",
+  text: "",
+  img: "a2j.jpg",
+  leadcontact:"",
+  github_url:"https://github.com/codeforpdx/a2jPDX",
+  technical_lead:"",
+  content_lead: "John Grant - Common's Law Center",
+  proposal: "Web form (initially internal, eventually public) which will securely collect information from applicant.
+  This Form will output to a decision tree interface which will allow a Commons Law Center staff member to help triage issues.
+  Appropriate Court Forms are pre-filled with client information.
+   Output: Pre-Filled forms as well as a guide to court. Allowing people to better represent themselves.
+   If Applicant meets requirements for representation grant.  Info is forwarded to Common’s lawyers",
+  problem: "Access to legal services is expensive. Many people end up representing themselves in court.  The outcomes are not optimal.",
+  goal:"Increase the efficacy of the Common’s Law Center by creating software which increases the productivity of its staff.",
+  scope:"Focus on family court. If successful program will be expanded to other fields."
+)
+Project.create!(
+  title: "Clackamas County Community Health: Social Media Analyst",
+  subtitle: "Syndrome Surveillance: Clackamas County",
+  text: "",
+  img: "ph1.jpg",
+  leadcontact:"",
+  github_url:"https://github.com/codeforpdx/syndromsurveillance",
+  technical_lead:"",
+  content_lead: "Elliot Moon, Clackamas County Department of Health, Housing, and Human Services",
+  proposal: "Social Media Scraper: Searches for epidemiological  keywords related to Hepatitis A.",
+  problem: "County needs to better assess public health issues and concerns. This project will focus on modernizing disease detection.",
+  goal:"The goal is to improve the county’s ability to assess potential public health hazards and help modernize Clackamas county’s disease fighting ability.",
+  scope:"Focus on detecting illness(Hepatitis A) using social media."
+)
+Project.create!(
+  title: "Clackamas County Community Health: Public Health Community Map",
+  subtitle: "Modernize Community Engagement",
+  text: "",
+  img: "ph2.jpg",
+  leadcontact:"",
+  github_url:"https://github.com/codeforpdx/healthmap",
+  technical_lead:"",
+  content_lead: "Elliot Moon, Clackamas County Department of Health, Housing, and Human Services",
+  proposal: "Uses county information to provide people with information about possible public health concerns.",
+  problem: "Clackamas County needs to better engage the community with public health issues and concerns.",
+  goal:" Help improve Clackamas county's public awareness of health issues within the county.",
+  scope:"Limited Datasets to start."
+)
 
 Teammate.create!(
   name: "Hugh Harker",
   email: "hugh@codeforpdx.org",
-  twitter: "https://twitter.com/caltal_",
-  github: "https://github.com/caltissue",
-  img: "pdx.jpg",
-  bio: "Hugh is an former professional urbanist and developer. Hugh started Code for PDX in May of 2018. He comes from Cumberland, RI by way of Athens, GA."
+  position: "Founder and Brigade Leader",
+  twitter: "https://twitter.com/htharker",
+  github: "https://github.com/htharker42",
+  img: "hugh.jpg",
+  bio: "Hugh is an professional urbanist and developer. Hugh started Code for PDX in May of 2018. He comes from Cumberland, RI by way of Athens, GA."
+  )
+Teammate.create!(
+  name: "Arthur Smeid",
+  email: "Arthur@codeforpdx.org",
+  position: "Social Media Manager, Community Organizer",
+  twitter: "https://twitter.com/lifeincommon",
+  github: "",
+  img: "arthur.jpg",
+  bio: "Arthur is our Social Media outreach manager and community organizer.  Arthur helps organize our social media effort and promotes CodeforPDX projects in the community."
+  )
+
+Teammate.create!(
+  name: "John Redder",
+  email: "john@codeforpdx.org",
+  position: "Community Organizer - Outreach Professional",
+  twitter: "",
+  github: "",
+  img: "john.jpg",
+  bio: "John has a background in social work and is currently working with Multnomah County's IT department.  John runs our outreach program which works with local Non Profits to organize projects."
   )
 
 Teammate.create!(
   name: "Cal Tissue",
   email: "cal@codeforpdx.org",
+  position: "Webmaster and Backend Support",
   twitter: "https://twitter.com/caltal_",
   github: "https://github.com/caltissue",
-  img: "pdx.jpg",
+  img: "cal.jpg",
   bio: "Cal is the webmaster for Code for PDX. He comes from Charlotte, NC, originally."
+  )
+
+Teammate.create!(
+  name: "Kelli Brooke McCloskey ",
+  email: "kelli@codeforpdx.org",
+  position: "Event Coordinator",
+  twitter: "",
+  github: "",
+  img: "kelli.jpg",
+  bio: "Kelli has a background in the music industry where she worked in event planning.
+  She recently moved back to Portland after spending a year abroad in Australia.
+  Kelli is currently a student at a web development bootcamp where she is quickly becoming an expert software engineer."
   )
 
 

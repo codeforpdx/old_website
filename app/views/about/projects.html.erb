@@ -1,15 +1,30 @@
-<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper">
+<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 topper top-offset">
   <div class="container">
     <!-- need to build a model to pipe in data -->
-    
+    <div class="row">
+      <%= link_to "/projects/#{@projects[0].id}" do %>
+        <div class="col-md-8">
+         <%= image_tag @projects[0].img, alt: @projects[0].title, class:"img-fluid mx-auto latest-post-img", style: "size: 500x300px" %>
+
+        </div>
+        <div class="col-md-4" >
+          <h1 class='headline'>
+            <%= @projects[0].title %>
+          </h1>
+        </div>
+        <% end %>
+
+        </div>
+
+
     <% @projects.each do |project| %>
       <div class="row project-box">
         <div class="col-md-4">
           <h1 class='headline'>
             <%= project.title %>
           </h1>
-          <h3 class='lede'>
-            <em><%= project.subtitle %></em> 
+          <h3 class='leed'>
+            <em><%= project.subtitle %></em>
           </h3>
           <%= image_tag project.img, alt: project.title, class:"img-fluid mx-auto latest-post-img" %>
         </div>
@@ -18,9 +33,9 @@
             <%= project.text %>
           </p>
         </div>
-      </div>  
+      </div>
     <% end %>
-    
-    
+
+
   </div>
 </div>
