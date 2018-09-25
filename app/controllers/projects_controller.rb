@@ -2,11 +2,10 @@ class ProjectsController < ApplicationController
   access all: [:show, :index], user: [:show, :index], site_admin: :all
 
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  layout "application"
+
   # GET /projects
   # GET /projects.json
   def index
-    @count = Project.count
     @projects = Project.all
   end
 

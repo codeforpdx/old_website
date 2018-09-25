@@ -30,7 +30,7 @@
 
 .top-offset{
   margin-top: 60px;
-  padding-top: 10px; 
+  padding-top: 10px;
 }
 
 .blog {
@@ -136,6 +136,14 @@
 .background_image_pdx{
   background-image: url('pdx_meetup.jpg');
 }
+.background_project{
+  background-image: url('prj2.jpg');
+  background-color: #340086;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .background_darkblue{
   background-color: #340086;
@@ -162,6 +170,24 @@
 
 .rounded{
   border-radius: 5px;
+}
+
+.navbar_border{
+  border-bottom: 2px solid black;
+}
+
+.masthead_height{
+  h1{
+    font-size: 150%;
+    border: 5px solid  #96BFE5;
+    padding: 10px;
+    text-shadow: 3px 3px #340086;
+  }
+  h4{
+    font-size: 100%;
+  }
+  height: 410px;
+  padding: 30px;
 }
 
 @media only screen and (max-width: 900px) {

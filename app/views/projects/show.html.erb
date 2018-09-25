@@ -1,23 +1,23 @@
-<div class="container col-md-6 offset-md-3 topper">
+<div class="container col-md-9  topper">
   <div class="container">
     <p id="notice"><%= notice %></p>
 
     <p>
-      <span class="lede author">
+      <!-- <span class="lede author">
       <% if @project.updated_at > @project.created_at %>
         Updated <%= @project.updated_at.to_s[5,5] %>
       <% else %>
         <%= @project.created_at.to_s[5,5] %>
       <% end %>
-      </span>
+      </span> -->
     </p>
-    <h1 class="headline"><%= @project.title %></h1>
-    <h4 class="lede"><%= @project.subtitle %></h4>
 
     <%= image_tag @project.img, alt: @project.title, class: "img-fluid mx-auto blog-img"%>
     <%= link_to @project.github_url do %>
       <p> github </p>
     <% end %>
+    <h2 lass="headline text_color"><%= @project.title %></h2>
+    <h4 class="leed"><%= @project.subtitle %></h4>
     <h5> <strong> Contact: </strong></h5> <h5><%= @project.content_lead %> </h5>
     <h5><strong> Problem: </strong></h5>
     <p class="blog-text"><%= @project.problem %></p>
@@ -29,9 +29,14 @@
     <h5><strong> Proposal: </strong></h5>
     <p class="blog-text"><%= @project.proposal %></p>
 
-    <div class="row">
-      <div class="col">
-        <%= link_to 'Back', root_path, class: "btn btn-primary btn-lrg" %>
+    fab fa-github
+
+    <div class="row ">
+      <div class="col-md-3 text-center">
+        <%= link_to 'Get involved!', new_volunteer_path, class: "btn btn-primary btn-block", size: "30x100" %>
+      </div>
+      <div class="col-md-3 text-center">
+        <%= link_to 'Back', root_path, class: "btn btn-primary btn-block", size: "30x100" %>
       </div>
       <div class="col" style="text-align:right">
         <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary"  if logged_in?(:site_admin) %>

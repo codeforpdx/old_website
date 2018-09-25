@@ -1,4 +1,5 @@
 class AboutController < ApplicationController
+
   def conduct
   end
 
@@ -11,9 +12,9 @@ class AboutController < ApplicationController
   def principals
   end
 
-  def projects
-    @projects = Project.all
-  end
+  # def projects
+  #   @projects = Project.all
+  # end
 
   def vision
   end

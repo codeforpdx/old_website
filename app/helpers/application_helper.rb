@@ -23,7 +23,7 @@ module ApplicationHelper
       iclass: 'fas fa-users'
     },
     {
-      url: about_projects_path,
+      url: projects_path,
       title: "Projects",
       target: "_self",
       iclass: 'fas fa-wrench'

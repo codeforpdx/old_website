@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def home
     @count = Blog.count
     @blogs = Blog.all
