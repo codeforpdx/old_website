@@ -15,15 +15,15 @@
     <% @projects.each do |project| %>
 
         <div class="card col-lg-5 offset-sm-1 topper">
-          <div style="height: 180px;">
+          <div style="height: 180px; margin: 20px;">
           <%= link_to "projects/#{project.id}" do %>
             <%= image_tag project.img, alt: project.title, class:"img-fluid mx-aut" %>
           <% end %>
         </div>
         <div>
           <%= link_to "projects/#{project.id}" do %>
-            <h2 class="text-color"><%= project.subtitle %></h2>
-            <p class="lede"><%= project.goal %></p>
+            <h2 class="text_color"><%= project.subtitle %></h2>
+            <p class="text_color"><%= project.goal %></p>
             <p>
               <span class="lede author">
                 <% if project.updated_at > project.created_at %>

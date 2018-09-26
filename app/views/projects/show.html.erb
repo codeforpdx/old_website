@@ -1,5 +1,4 @@
-<div class="container col-md-9  topper">
-  <div class="container">
+<div class="container col-md-8  topper" style="padding: 20px;">
     <p id="notice"><%= notice %></p>
 
     <p>
@@ -11,25 +10,32 @@
       <% end %>
       </span> -->
     </p>
+<div class="col-lg-12 topper row">
+    <%= image_tag @project.img, alt: @project.title, class: "img-fluid mx-auto blog-img", style: "padding: 0 10%;"%>
 
-    <%= image_tag @project.img, alt: @project.title, class: "img-fluid mx-auto blog-img"%>
-    <%= link_to @project.github_url do %>
-      <p> github </p>
-    <% end %>
-    <h2 lass="headline text_color"><%= @project.title %></h2>
-    <h4 class="leed"><%= @project.subtitle %></h4>
-    <h5> <strong> Contact: </strong></h5> <h5><%= @project.content_lead %> </h5>
-    <h5><strong> Problem: </strong></h5>
+    <div class="col-md-9">
+      <h2 class="text_greenblue"><%= @project.title %></h2>
+    </div>
+    <div class="col-md-2">
+      <%= link_to @project.github_url do %>
+      <i class="fab fa-github text_color text-right" style="font-size: 300%;"> </i>
+      <% end %>
+    </div>
+
+
+  </div>
+    <h5 class="text_color"> <strong> Contact: </strong></h5>
+    <p class="blog-text"><%= @project.content_lead %> </p>
+    <h5 class="text_color"><strong> Problem: </strong></h5>
     <p class="blog-text"><%= @project.problem %></p>
 
-    <h5><strong> Scope: </strong></h5>
+    <h5 class="text_color"><strong> Scope: </strong></h5>
     <p class="blog-text"><%= @project.scope %></p>
-    <h5><strong> Goal: </strong></h5>
+    <h5 class="text_color"><strong> Goal: </strong></h5>
     <p class="blog-text"><%= @project.goal %></p>
-    <h5><strong> Proposal: </strong></h5>
+    <h5 class="text_color"><strong> Proposal: </strong></h5>
     <p class="blog-text"><%= @project.proposal %></p>
 
-    fab fa-github
 
     <div class="row ">
       <div class="col-md-3 text-center">
@@ -43,5 +49,4 @@
         <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
       </div>
     </div>
-  </div>
 </div>

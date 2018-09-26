@@ -16,7 +16,7 @@ Blog.create!(
 
 Project.create!(
   title: "Access2Justice: Commons Law Center",
-  subtitle: "Access to Justice: Family Housing",
+  subtitle: "Access to Justice: Family Court",
   text: "",
   img: "a2j.jpg",
   leadcontact:"",
