@@ -8,9 +8,12 @@
     background-image: image-url('prj2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 1px solid black;
+    border-top: 2px solid #340086;
     padding-bottom: 3rem;
-    margin-top: 30px;
+    margin-top: 40px;
+    background-color: #340086;
+    height: 500px;
+    background-position: top;
 }
 
 #main-text {
@@ -173,7 +176,7 @@
 }
 
 .navbar_border{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #00B3A7;
 }
 
 .masthead_height{

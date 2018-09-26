@@ -3,7 +3,7 @@
 <div style="width:100%" id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading" id="main-title">
-      Code for PDX.
+      Code for PDX
     </h1>
     <p class="lead"  id="subtitle-text">
       As a Code for America Brigade,
@@ -93,54 +93,26 @@
   <div class="container">
     <h3>Checkout Our Current Projects!</h3>
     <div class="row">
+      <% @projects.each do |project| %>
     <div class="col-md-4">
-      <div class="mb-4 box-shadow">
-        <%= link_to "/projects/#{@projects[-1].id}" do %>
-        <%= image_tag @projects[-1].img, alt: @projects[-1].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
+      <div class="mb-4 box-shadow masthead_height">
+        <%= link_to "/projects/#{project.id}" do %>
+        <%= image_tag project.img, alt: project.title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
         <% end %>
         <div class="card-body background_white rounded">
           <h3>
-          <%= @projects[-1].title %>
+          <%= project.subtitle %>
         </h3>
-          <p class="card-text"><%= @projects[-1].subtitle %></p>
+          <p class="card-text"><%= project.subtitle %></p>
           <div class="d-flex justify-content-between align-items-center">
             <small class="text_red">Fall/Winter 2018</small>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="mb-4 box-shadow">
-        <%= link_to "/projects/#{@projects[-2].id}" do %>
-        <%= image_tag @projects[-2].img, alt: @projects[-2].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
-        <% end %>
-        <div class="card-body background_white rounded">
-          <h3>
-          <%= @projects[-2].title %>
-        </h3>
-          <p class="card-text"><%= @projects[-2].subtitle %></p>
-          <div class="d-flex justify-content-between align-items-center">
-            <small class="text_red">Fall/Winter 2018</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="mb-4 box-shadow">
-        <%= link_to "/projects/#{@projects[-3].id}" do %>
-        <%= image_tag @projects[-3].img, alt: @projects[-3].title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
-        <% end %>
-        <div class="card-body background_white rounded">
-          <h3>
-          <%= @projects[-3].title %>
-        </h3>
-          <p class="card-text"><%= @projects[-3].subtitle %></p>
-          <div class="d-flex justify-content-between align-items-center">
-            <small class="text_red">Fall/Winter 2018</small>
-          </div>
-        </div>
-      </div>
-    </div>
+    <% end -%>
+
+
   </div>
 </div>
 
