@@ -68,7 +68,7 @@ div.partial-sides:after{ margin-right: -6px; right:0;border-top:0 !important; bo
 
 #main_featurette {
     width: 100%;
-    background-image: image-url('prj2.jpg');
+    background-image: image-url('c4pdx.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-top: 2px solid #ffff;
@@ -196,7 +196,12 @@ div.partial-sides:after{ margin-right: -6px; right:0;border-top:0 !important; bo
   color:#00B3A7;
 }
 .background_image{
-  background-image: image-url('pdx_night.jpg');
+  background-image: image-url('prj2.jpg');
+  background-color: #340086;
+  height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background_image_pdx{

@@ -1,21 +1,25 @@
-<!-- <div id="main_featurette">
+<div id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading" id="main-title">
-      Code for PDX
+       Code for PDX
     </h1>
     <p class="lead"  id="subtitle-text">
-      As a Code for America Brigade,
+     As a <a href="http://www.codeforamerica.org" target="_blank" style="color: blue;"> Code for America Brigade </a>,
       we're part of a national network of civic-minded volunteers
       who contribute their skills toward using the web
       as a platform for local government and community service.
       Let’s all build it together.
-
     </p>
   </div>
 
-</div> -->
+</div>
 
-<div style="position: fixed; width: 100%; height: 1000px; z-index: -5" class="background_project">
+<!-- <div style="position: fixed; width: 100%; height: 800px; z-index: -5" class="background_project">
+
+</div>
+
+
+<div style="position: fixed; margin-top: 700px; width: 100%; height: 100px; z-index: -4" class="background_greenblue">
 
 </div>
 
@@ -32,7 +36,7 @@
       as a platform for local government and community service.</p>
       <p><em> Let’s build it together.</em></p>
     </div>
-  </div>
+  </div> -->
 
 <!-- <div class="partial-top">
   Partial borders on top &amp; right
@@ -75,7 +79,7 @@
   <% end %>
 </div>
 </div>
-
+<!--
 <div class="featurette featurette_main ">
   <div class="container text-center text_white" style="height: 100px; font-size: 2rems; background: white; color: black;">
     <h4>We connect civic technologists with project leaders who have ideas for community solutions.</h4>
@@ -110,36 +114,23 @@
   </div>
 </div>
 
+</div> -->
+<div class="background_image text_white">
+<div style="text-align: center;">
+  <h2 class="background_xparent text_white">Check Out Our Current Projects!</h2>
 </div>
+<div class="row">
 
-<div class="row featurette featurette_main background_white">
-  <hr>
-  <div class="container">
-    <h3>Checkout Our Current Projects!</h3>
-    <div class="row">
       <% @projects.each do |project| %>
-    <div class="col-lg-5">
-      <div class="mb-4 box-shadow masthead_height">
-        <%= link_to "/projects/#{project.id}" do %>
-          <%= image_tag project.img, alt: project.title %>
-        <% end %>
-        <div class="card-body background_white rounded">
-          <h3>
-          <%= project.subtitle %>
-        </h3>
-          <p class="card-text"><%= project.subtitle %></p>
-          <div class="d-flex justify-content-between align-items-center">
-            <small class="text_red">Fall/Winter 2018</small>
-          </div>
-        </div>
+      <div class="col-lg-3" style="margin: 10px 20px; ">
+            <%= link_to "/projects/#{project.id}" do %>
+              <%= image_tag project.img, alt: project.title %>
+            <% end %>
       </div>
-    </div>
-    <% end -%>
-    </div>
-  </div>
+      <% end -%>
 
 </div>
-
+</div>
 <div class="featurette_main background_white text_color">
 
 <div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 ">
