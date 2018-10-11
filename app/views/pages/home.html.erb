@@ -1,6 +1,4 @@
-
-
-<div style="width:100%" id="main_featurette">
+<!-- <div id="main_featurette">
   <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
     <h1 class="featurette-heading" id="main-title">
       Code for PDX
@@ -11,16 +9,42 @@
       who contribute their skills toward using the web
       as a platform for local government and community service.
       Let’s all build it together.
+
     </p>
   </div>
+
+</div> -->
+
+<div style="position: fixed; width: 100%; height: 1000px; z-index: -5" class="background_project">
+
 </div>
-<div class="row featurette background_white featurette_main">
+
+<div class=" container featurette_main featurette row col-xl-12">
+  <div class="col-xl-5 background_white" style="margin-top: 200px; margin-bottom: 100px; padding: 70px 50px; text-align: right; color:black; border-right: 1px solid black;">
+    <h1 style="font-size: 3rem;">
+      <strong>We are <span class="text_color">Code for PDX</span></strong>
+    </h1>
+  </div>
+    <div class="col-xl-5 background_white" style="margin-top: 200px; margin-bottom: 100px; padding: 20px 50px; text-align: right; color:black; border-right: 1px solid black;">
+      <p style="font-size: 1.2rem;">As a <a href="http://www.codeforamerica.org" target="_blank" style="color: blue;"> Code for America Brigade </a>,
+      we're part of a national network of civic-minded volunteers
+      who contribute their skills toward using the web
+      as a platform for local government and community service.</p>
+      <p><em> Let’s build it together.</em></p>
+    </div>
+  </div>
+
+<!-- <div class="partial-top">
+  Partial borders on top &amp; right
+</div> -->
+
+<div class="row featurette featurette_main background_white">
   <div class="container text-left">
     <% if @meeting %>
     <div class="row">
-      <div class="col-lg-8">
-    <h1 class="text_color"> Next Meeting: <%= @meeting.title %> </h1>
-    <h2 class="text_color">Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
+      <div class="col-lg-8 background_white" style="color: black; padding: 20px;">
+    <h1> Next Meeting: <%= @meeting.title %> </h1>
+    <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
     <h2 class=><%= @meeting.location %> </h2>
     <p> This will be the official launch of Code for PDX.
       We have so much to share with you folks!
@@ -31,7 +55,7 @@
     <div class="col-lg-4">
       <iframe src= '<%= @meeting.googlemapurl %>'
               width="400"
-              height="300"
+              height="350"
               frameborder="0"
               style="border:0"
               allowfullscreen>
@@ -52,13 +76,13 @@
 </div>
 </div>
 
-<div class="row featurette featurette_main background_image text_white">
-  <div class="container text-center">
+<div class="featurette featurette_main ">
+  <div class="container text-center text_white" style="height: 100px; font-size: 2rems; background: white; color: black;">
     <h4>We connect civic technologists with project leaders who have ideas for community solutions.</h4>
     <div class="row">
     <div class="col-md-6">
-      <div class="mb-4 box-shadow text-center card-height  background_xparent rounded text_white">
-        <h1 style="font-size: 500%;">
+      <div class="mb-4 box-shadow text-center card-height  background_white rounded">
+        <h1 style="font-size: 500%; color: purple;">
         <i class="fa fa-user-plus" aria-hidden="true"></i>
       </h1>
         <div class="card-body">
@@ -69,9 +93,10 @@
         </div>
       </div>
     </div>
+
     <div class="col-md-6">
-      <div class="mb-4 box-shadow text-center card-height  background_xparent rounded text_white">
-            <h1 style="font-size: 500%;">
+      <div class="mb-4 box-shadow text-center card-height  background_white rounded">
+            <h1 style="font-size: 500%; color: purple;">
             <i class="fas fa-project-diagram"></i>
           </h1>
             <div class="card-body">
@@ -87,17 +112,16 @@
 
 </div>
 
-<div class="row featurette featurette_main background_xparent text_color">
-
-  <hr class="featurette-divider background_pink">
+<div class="row featurette featurette_main background_white">
+  <hr>
   <div class="container">
     <h3>Checkout Our Current Projects!</h3>
     <div class="row">
       <% @projects.each do |project| %>
-    <div class="col-md-4">
+    <div class="col-lg-5">
       <div class="mb-4 box-shadow masthead_height">
         <%= link_to "/projects/#{project.id}" do %>
-        <%= image_tag project.img, alt: project.title, class:"img-fluid mx-auto latest-post-img card-img-top" %>
+          <%= image_tag project.img, alt: project.title %>
         <% end %>
         <div class="card-body background_white rounded">
           <h3>
@@ -111,10 +135,8 @@
       </div>
     </div>
     <% end -%>
-
-
+    </div>
   </div>
-</div>
 
 </div>
 
@@ -183,9 +205,7 @@
       for the updates on when and where we're meeting.
     </p>
   </div>
-</div>
 
-<div class="col-lg 12 text-center background_white featurette_main">
   <h1 class="text_color"> Support Code for PDX </h1>
   <p>
     Our Supporters.
@@ -198,7 +218,8 @@
   <div class="col-lg 12 text-center">
     <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "btn background_greenblue btn-lg" %>
   </div>
-
+    <%= render 'shared/footer' %>
+</div>
 
 
 
