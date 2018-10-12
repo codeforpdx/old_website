@@ -25,13 +25,9 @@
   <rect stroke="#000000" stroke-opacity="0" id="svg_65" height="70.875" width="5.48437" y="127.64059" x="319.48441" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#f7f7f7"/>
   <rect id="svg_69" height="6.75" width="37.125" y="195.14059" x="303.03128" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f7f7f7"/>
   </g>
-  <!-- <g id="svg_73" stroke="null">
-   <rect fill="#566aff" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="148.92786" y="51.31601" width="27.32233" height="65.86799" id="svg_16" transform="rotate(90 162.58901977539065,84.25000000000001) " stroke="#020000"/>
-   <text fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="215.35787" y="-87.43699" id="svg_36" font-size="24" font-family="Monospace" text-anchor="middle" xml:space="preserve" font-weight="bold" stroke="#020000" transform="matrix(0.4824212431870472,0,0,0.5852756734556622,58.185394532319464,140.9385066692514) ">&lt; PDX /&gt;</text>
-  </g>
   <g id="svg_24" stroke="null">
    <path fill="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" fill-opacity="0" d="m313.15789,174.43496l-18.86316,0l-28.29474,34.77895l112,0l-22.98947,-34.77895l-18.27368,-0.58947" id="svg_7" stroke="#fcf9f9"/>
    <path fill="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" fill-opacity="0" d="m324.30931,131.03113c-8.78976,0 -15.91579,7.12603 -15.91579,15.91579c0,8.79188 15.91579,38.45468 15.91579,38.45468s15.91579,-29.66279 15.91579,-38.45468c0,-8.78976 -7.12391,-15.91579 -15.91579,-15.91579zm0,23.52142c-4.19965,0 -7.60563,-3.40386 -7.60563,-7.60563s3.40598,-7.60563 7.60563,-7.60563s7.60563,3.40598 7.60563,7.60563s-3.40598,7.60563 -7.60563,7.60563z" id="svg_9" stroke="#fcf9f9"/>
-  </g> -->
+  </g>
  </g>
 </svg>
