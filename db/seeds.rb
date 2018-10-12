@@ -5,22 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+#TODO add these columns to Project: :trello link, slack, root color
 
 Blog.create!(
                 title: "Welcome to the new CodeforPDX website!",
                 subtitle: "We are up and running!",
                 text: "Please stay tuned, there will be more shortly.",
-                img: "logo.jpg"
+                img: "logo.svg"
               )
 
 Project.create!(
   title: "Access2Justice: Commons Law Center",
   subtitle: "Access to Justice: Family Court",
   text: "",
-  img: "a2j.jpg",
+  img: "a2j.svg",
   leadcontact:"",
-  github_url:"https://github.com/codeforpdx/a2jPDX",
+  github_url:"https://github.com/CodeForPortland/access2justicePDX",
   technical_lead:"",
   content_lead: "John Grant - Common's Law Center",
   proposal: "Web form (initially internal, eventually public) which will securely collect information from applicant.
@@ -30,35 +30,44 @@ Project.create!(
    If Applicant meets requirements for representation grant.  Info is forwarded to Common’s lawyers",
   problem: "Access to legal services is expensive. Many people end up representing themselves in court.  The outcomes are not optimal.",
   goal:"Increase the efficacy of the Common’s Law Center by creating software which increases the productivity of its staff.",
-  scope:"Focus on family court. If successful program will be expanded to other fields."
+  scope:"Focus on family court. If successful program will be expanded to other fields.",
+  trello: "",
+  slack: "https://codeforpdx.slack.com/",
+  color: "#5907f2"
 )
 Project.create!(
   title: "Clackamas County Community Health: Social Media Analyst",
-  subtitle: "Syndrome Surveillance: Clackamas County",
+  subtitle: "Syndrome Surveyor: Clackamas County",
   text: "",
-  img: "ph1.jpg",
+  img: "ph1.svg",
   leadcontact:"",
-  github_url:"https://github.com/codeforpdx/syndromsurveillance",
+  github_url:"https://github.com/CodeForPortland/symptomsurveyPDX",
   technical_lead:"",
   content_lead: "Elliot Moon, Clackamas County Department of Health, Housing, and Human Services",
   proposal: "Social Media Scraper: Searches for epidemiological  keywords related to Hepatitis A.",
   problem: "County needs to better assess public health issues and concerns. This project will focus on modernizing disease detection.",
   goal:"The goal is to improve the county’s ability to assess potential public health hazards and help modernize Clackamas county’s disease fighting ability.",
-  scope:"Focus on detecting illness(Hepatitis A) using social media."
+  scope:"Focus on detecting illness(Hepatitis A) using social media.",
+  trello: "",
+  slack: "https://codeforpdx.slack.com/",
+  color: "#269b0f"
 )
 Project.create!(
-  title: "Clackamas County Community Health: Public Health Community Map",
-  subtitle: "Modernize Community Engagement",
+  title: "Access2Justice: Record Expungement",
+  subtitle: "Automate Justice",
   text: "",
-  img: "ph2.jpg",
+  img: "a2j2.svg",
   leadcontact:"",
-  github_url:"https://github.com/codeforpdx/healthmap",
+  github_url:"https://github.com/CodeForPortland/recordexpungPDX",
   technical_lead:"",
-  content_lead: "Elliot Moon, Clackamas County Department of Health, Housing, and Human Services",
-  proposal: "Uses county information to provide people with information about possible public health concerns.",
-  problem: "Clackamas County needs to better engage the community with public health issues and concerns.",
-  goal:" Help improve Clackamas county's public awareness of health issues within the county.",
-  scope:"Limited Datasets to start."
+  content_lead: "Michael Zhang, Community Law Division Metropolitan Public Defender",
+  proposal: "Create a form and decision tree to help Public Defender's office quickly expungment qualified applicants records.",
+  problem: "Expungment of records is a laborious and expensive project that most folks can't afford. ",
+  goal:" This project will modernize the process and help people removed qualified convictions off of their record.",
+  scope:"Qualified Convictions",
+  trello: "https://trello.com/b/ddsKGAPb/expungedpd",
+  slack: "https://codeforpdx.slack.com/",
+  color: "#e2841f"
 )
 
 Teammate.create!(

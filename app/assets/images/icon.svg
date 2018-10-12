@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m192.0325,274.13748l0,-1l1,1l-1,0z" fill="#5907f2" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+  <ellipse cx="328.5" cy="233.5" fill="#f9f7f7" id="svg_1" rx="190" ry="130" stroke="#000000" stroke-width="5"/>
+  <text fill="#000000" font-family="Monospace" font-size="101" font-weight="bold" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="335.5" xml:space="preserve" y="266.5">&lt;PDX/&gt;</text>
+ </g>
+</svg>
