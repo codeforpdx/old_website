@@ -51,58 +51,23 @@
   <% end %>
 </div>
 </div>
-<!--
-<div class="featurette featurette_main ">
-  <div class="container text-center text_white" style="height: 100px; font-size: 2rems; background: white; color: black;">
-    <h4>We connect civic technologists with project leaders who have ideas for community solutions.</h4>
-    <div class="row">
-    <div class="col-md-6">
-      <div class="mb-4 box-shadow text-center card-height  background_white rounded">
-        <h1 style="font-size: 500%; color: purple;">
-        <i class="fa fa-user-plus" aria-hidden="true"></i>
-      </h1>
-        <div class="card-body">
-          <%= link_to "I Want to Volunteer", new_volunteer_path, class: "btn background_darkblue btn-block btn-lg " %>
-          <div class="d-flex justify-content-between align-items-center">
 
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="background_image text_white">
 
-    <div class="col-md-6">
-      <div class="mb-4 box-shadow text-center card-height  background_white rounded">
-            <h1 style="font-size: 500%; color: purple;">
-            <i class="fas fa-project-diagram"></i>
-          </h1>
-            <div class="card-body">
-              <%= link_to "I Have an Idea", volunteers_propose_path, class: "btn background_darkblue btn-block btn-lg " %>
-              <div class="d-flex justify-content-between align-items-center">
-
-              </div>
-            </div>
-          </div>
-    </div>
-  </div>
-</div>
-
-</div> -->
-<!-- <div class="background_image text_white">
   <div style="text-align: center;">
     <h2 class="background_xparent_orange text_white">Check Out Our Current Projects!</h2>
   </div>
+
   <div class="row">
-
-        <% @projects.each do |project| %>
-        <div class="col-lg-3" style="margin: 10px 20px; ">
-              <%= link_to "/projects/#{project.id}" do %>
-                <%= image_tag project.img, alt: project.title %>
-              <% end %>
+  <% @projects.each do |project| %>
+  <div class="col-lg-3" style="margin: 10px 20px;">
+  <%= link_to "/projects/#{project.id}" do %>
+          <%= image_tag project.img %>
         </div>
-        <% end -%>
-
+      <% end %>
+    <% end %>
   </div>
-</div> -->
+</div>
 
 <div class="featurette_main background_white text_color">
 <div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 ">
