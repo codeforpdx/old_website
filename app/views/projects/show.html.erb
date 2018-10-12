@@ -8,6 +8,10 @@
 <% else %>
 <% colors = ["#5e3c58", "#7e6279", "#412a3d"] %>
 <% end %>
+<style>
+
+
+</style>
 <svg width="100%" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
  <g class="layer">
@@ -27,25 +31,46 @@
  </g>
 </svg>
 </div>
+<div style="text-align: right; margin-right: 10px;">
+  <%= link_to @project.github_url do %>
+  <i class="fab fa-github text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <% end %>
+  <%= link_to @project.slack do %>
+  <i class="fab fa-slack text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <% end %>
+  <% if @project.trello? %>
+    <%= link_to @project.trello do %>
+      <i class="fab fa-trello text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+    <% end %>
+  <% end %>
 
+</div>
+<div style="padding: 20px; margin: 10px">
+  <h5 class="text_color"> <strong> Contact: </strong></h5>
+  <p class="blog-text"><%= @project.content_lead %> </p>
+  <h5 class="text_color"><strong> Problem: </strong></h5>
+  <p class="blog-text"><%= @project.problem %></p>
 
-<div class="container col-md-8  topper" style="padding: 20px;">
-    <p id="notice"><%= notice %></p>
-
-    <p>
-      <!-- <span class="lede author">
-      <% if @project.updated_at > @project.created_at %>
-        Updated <%= @project.updated_at.to_s[5,5] %>
-      <% else %>
-        <%= @project.created_at.to_s[5,5] %>
-      <% end %>
-      </span> -->
-    </p>
-  </div>
+  <h5 class="text_color"><strong> Scope: </strong></h5>
+  <p class="blog-text"><%= @project.scope %></p>
+  <h5 class="text_color"><strong> Goal: </strong></h5>
+  <p class="blog-text"><%= @project.goal %></p>
+  <h5 class="text_color"><strong> Proposal: </strong></h5>
+  <p class="blog-text"><%= @project.proposal %></p>
+</div>
+<div class="col-lg-3" style="text-align: left; margin-left: 10%;">
+    <%= link_to 'Get involved!', new_volunteer_path, class: "btn btn-primary btn-block", size: "30x100", background: colors[2] %>
+    <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary"  if logged_in?(:site_admin) %>
+    <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
+</div>
+<!--
 <div class="col-lg-12 topper row">
-    <div class="col-md-2">
+    <div class="text-right">
       <%= link_to @project.github_url do %>
       <i class="fab fa-github text_color text-right" style="font-size: 300%;"> </i>
+      <% end %>
+      <%= link_to @project.slack do %>
+      <i class="fab fa-slack text_color text-right" style="font-size: 300%;"> </i>
       <% end %>
       <% if @project.trello? %>
         <%= link_to @project.trello do %>
@@ -53,10 +78,9 @@
         <% end %>
       <% end %>
     </div>
-
-
-
   </div>
+
+<div style:"margin: 10 auto">
     <h5 class="text_color"> <strong> Contact: </strong></h5>
     <p class="blog-text"><%= @project.content_lead %> </p>
     <h5 class="text_color"><strong> Problem: </strong></h5>
@@ -68,11 +92,11 @@
     <p class="blog-text"><%= @project.goal %></p>
     <h5 class="text_color"><strong> Proposal: </strong></h5>
     <p class="blog-text"><%= @project.proposal %></p>
-
+</div>
 
     <div class="row ">
       <div class="col-md-3 text-center">
-        <%= link_to 'Get involved!', new_volunteer_path, class: "btn btn-primary btn-block", size: "30x100" %>
+        <%= link_to 'Get involved!', new_volunteer_path, class: "btn btn-primary btn-block", size: "30x100", style:"background: colors[2]" %>
       </div>
       <div class="col-md-3 text-center">
         <%= link_to 'Back', root_path, class: "btn btn-primary btn-block", size: "30x100" %>
@@ -82,4 +106,4 @@
         <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
       </div>
     </div>
-</div>
+</div> -->

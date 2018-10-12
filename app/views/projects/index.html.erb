@@ -1,44 +1,39 @@
-<div class="masthead_height row text-center background_project">
-  <div class="col-md-12" style="font-size: 4rem;">
-  <h1 class="text-white topper featurette-heading rounded"> Current Projects</h1>
-  <p class="text_pink"> These are a our current projects.  If you would like to take part, please click below.</p>
-  <%= link_to "I Want to Volunteer", new_volunteer_path, class: "btn background_darkblue btn-lg " %>
-</div>
-</div>
-
+<% colors = ["#221FE2","#17159e","#7a78ed"] %>
+<svg width="100%" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <!-- <path d="m192.0325,274.13748l0,-1l1,1l-1,0z" fill="#9516bc" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/> -->
+  <path d="m0,58l-0.5,177.5l3035,100l-1,-274l-633.5,-3.5z" fill=<%= colors[0] %> id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+  <path d="m192.0325,274.13748l0,-1l1,1l-1,0z" fill="#5907f2" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+  <path d="m192.0325,274.13748l0,-1l1,1l-1,0z" fill="#5907f2" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m499.15255,197.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[2] %>   id="svg_6" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m378.15255,76.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[1] %> id="svg_7" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m440.15255,252.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[2] %> id="svg_8" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m507.15255,293.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[1] %> id="svg_9" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m299.15255,123.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[2] %> id="svg_10" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m379.15255,162.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[1] %> id="svg_11" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+   <path d="m447.15255,125.45535l17.78572,-35.57143l47.42858,0l17.78572,35.57143l-17.78572,35.57144l-47.42858,0l-17.78572,-35.57144z" fill=<%= colors[2] %> id="svg_12" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+  <text xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_72" y="170" x="70%" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f9f4f4">Current Projects</text>
+ </g>
+</svg>
 
 <div class="container col-md-12 topper">
   <div class="container">
     <p id="notice"><%= notice %></p>
-
+  </div>
 <div class="row">
     <% @projects.each do |project| %>
-
-        <div class="card col-lg-5 offset-sm-1 topper">
-          <div style="height: 180px; margin: 20px;">
+      <div class="col-md-3" style="margin-left: 20px">
           <%= link_to "projects/#{project.id}" do %>
-            <%= image_tag project.img, alt: project.title, class:"img-fluid mx-aut" %>
-          <% end %>
+            <%= image_tag project.img, alt: project.title %>
         </div>
-        <div>
-          <%= link_to "projects/#{project.id}" do %>
-            <h2 class="text_color"><%= project.subtitle %></h2>
-            <p class="text_color"><%= project.goal %></p>
-            <p>
-              <span class="lede author">
-                <% if project.updated_at > project.created_at %>
-                  Updated <%= project.updated_at.to_s[5,5] %>
-                <% else %>
-                  <%= project.created_at.to_s[5,5] %>
-                <% end %>
-              </span>
-            </p>
           <% end %>
-        </div>
-      </div>
 
     <% end %>
+  </div>
 </div>
+
 
     <% if @projects.count >= 4 %>
     <div id="next-three-blogposts" class="row featurette topper">
