@@ -62,7 +62,7 @@
   <% @projects.each do |project| %>
   <div class="col-lg-3" style="margin: 10px 20px;">
   <%= link_to "/projects/#{project.id}" do %>
-          <%= image_tag project.img %>
+          <%= image_tag project.img, alt: project.title, width: "155%", height: "110%" %>
         </div>
       <% end %>
     <% end %>
