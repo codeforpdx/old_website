@@ -32,6 +32,9 @@
 </svg>
 </div>
 <div style="text-align: right; margin-right: 10px;">
+  <%= link_to "#{@project.github_url}/wiki" do %>
+  <i class="fab fa-wikipedia-w text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <% end %>
   <%= link_to @project.github_url do %>
   <i class="fab fa-github text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
   <% end %>
