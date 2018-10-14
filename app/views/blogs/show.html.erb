@@ -15,7 +15,7 @@
   <div class="row">
 
     <div class="col-lg-11" style="background: <%= colors[1] %>">
-        <%= image_tag @blog.img, alt: @blog.title, class: "mx-auto blog-img"%>
+        <%= image_tag @blog.img, alt: @blog.title, size:"600x400"  class: "mx-auto"%>
 
       <div style="padding: 20px; margin: 10px">
         <%= link_to blogs_path do %>
@@ -24,21 +24,21 @@
 
         <% if logged_in?(:site_admin) %>
           <%= link_to edit_blog_path(@blog) do %>
-            <i class="fab fa-edit text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
+            <i class="fas fa-edit text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
           <% end %>
 
           <%= link_to blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' }  do %>
-          <i class="fab fa-trash-alt text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
+          <i class="fas fa-trash-alt text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
           <% end %>
         <% end %>
 
         <% if @blog.updated_at > @blog.created_at %>
           Updated <%= @blog.updated_at.to_s[5,5] %>
         <% else %>
-          <h5 style="<%= colors[1] %>"> <%= @blog.created_at.to_s[5,5] %> </h5>
+          <h5 style="color: <%= colors[1] %>"> <%= @blog.created_at.to_s[5,5] %> </h5>
         <% end %>
-        <h5 style="<%= colors[1] %>"> <strong><%= @blog.subtitle %></strong></h5>
-        <p class="blog-text"><%= @blog.text %> </p>
+        <h5 style="color: <%= colors[1] %>"> <strong><%= @blog.subtitle %></strong></h5>
+        <p style="color: white;" class="blog-text"><%= @blog.text %> </p>
       </div>
     </div>
 
