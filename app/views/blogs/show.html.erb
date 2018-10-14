@@ -1,31 +1,64 @@
-<div class="container col-md-6 offset-md-3 topper">
+
+<% colors = ["#007f4a", "#7e6279", "#412a3d"] %>
+<svg width="100%" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m0,58l-0.5,177.5l3035,100l-1,-274l-633.5,-3.5z" fill=<%= colors[0] %> id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+    <path d="m485.0325,269.13748l0,-1l1,1l-1,0z" fill="#007f7f" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+    <path d="m369.0325,202.21565l43,-75.25001l43,75.25001l-86.00001,0l0.00001,0z" fill="#00bfbf" id="svg_2" stroke="#000000" stroke-width="0"/>
+    <path d="m297.2175,64.41564l36,-63l36,63l-72,0z" fill="#007f7f" id="svg_5" stroke="#000000" stroke-width="0"/>
+    <path d="m372.57751,87.93452l30.28571,-53l30.28571,53l-60.57143,0l0.00001,0z" fill="#00bfbf" id="svg_8" stroke="#000000" stroke-width="0"/>
+    <path d="m306.1925,103.29563l15.5,-27.125l15.5,27.125l-31,0z" fill="#00ffff" id="svg_13" stroke="#000000" stroke-width="0"/>
+    <path d="m404.2825,244.48063l11.42857,-20l11.42857,20l-22.85715,0l0.00001,0z" fill="#007f7f" id="svg_14" stroke="#000000" stroke-width="0"/>
+    <path d="m316.76253,170.29933l5,-8.75l5,8.75l-10,0z" fill="#00ffff" id="svg_16" stroke="#000000" stroke-width="0"/>
+    <path d="m327.2175,265.41564l36,-63l36,63l-72,0z" fill="#007f7f" id="svg_4" stroke="#000000" stroke-width="0"/>
+    <path d="m325.68743,158.34054l28.99999,-50.24999l28.99999,50.24999l-57.99998,0z" fill="#00bfbf" id="svg_9" stroke="#000000" stroke-width="0"/>
+    <path d="m427.75248,298.58442l31.42859,-55.00003l31.42859,55.00003l-62.85717,0l-0.00001,0z" fill="#00ffff" id="svg_11" stroke="#000000" stroke-width="0"/>
+    <path d="m428.83753,126.28565l21,-36.74999l21,36.74999l-41.99999,0l-0.00001,0z" fill="#007f7f" id="svg_17" stroke="#000000" stroke-width="0"/>
+    <text xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_72" y="170" x="70%" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f9f4f4"><%= @blog.title%></text>
+ </g>
+</svg>
+  <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+        <p>
+          <span class="lede author">
+          <% if @blog.updated_at > @blog.created_at %>
+            Updated <%= @blog.updated_at.to_s[5,5] %>
+          <% else %>
+            <%= @blog.created_at.to_s[5,5] %>
+          <% end %>
+          </span>
+        </p>
+        <h4 class="lede"><%= @blog.subtitle %></h4>
+
+          <p class="blog-text"><%= @blog.text %></p>
+
+    </div>
+      <div class="col-lg-8">
+                <%= image_tag @blog.img, alt: @blog.title, class: "mx-auto blog-img"%>
+        </div>
+        <div class="row">
+            <div class="col">
+              <%= link_to 'Back', blogs_path, class: "btn", style:"background: #{colors[0]}" %>
+            </div>
+            <div class="col" style="text-align:right">
+              <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-primary"  if logged_in?(:site_admin) %>
+              <%= link_to 'Delete', blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container col-md-6 offset-md-3">
   <div class="container">
     <p id="notice"><%= notice %></p>
 
-    <p>
-      <span class="lede author">
-      <% if @blog.updated_at > @blog.created_at %>
-        Updated <%= @blog.updated_at.to_s[5,5] %>
-      <% else %>
-        <%= @blog.created_at.to_s[5,5] %>
-      <% end %>
-      </span>
-    </p>
-    <h1 class="headline"><%= @blog.title %></h1>
-    <h4 class="lede"><%= @blog.subtitle %></h4>
 
-    <%= image_tag @blog.img, alt: @blog.title, class: "mx-auto blog-img"%>
-
-    <p class="blog-text"><%= @blog.text %></p>
-
-    <div class="row">
-      <div class="col">
-        <%= link_to 'Back', blogs_path, class: "btn btn-secondary" %>
-      </div>
-      <div class="col" style="text-align:right">
-        <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-primary"  if logged_in?(:site_admin) %>
-        <%= link_to 'Delete', blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
-      </div>
     </div>
   </div>
 </div>

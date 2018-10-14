@@ -30,41 +30,51 @@
   <text xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_72" y="170" x="70%" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f9f4f4"><%= @project.title%></text>
  </g>
 </svg>
-</div>
-<div style="text-align: right; margin-right: 10px;">
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-7" style="background: <%= colors[1] %>">
+      <div style="padding: 20px; margin: 10px">
+        <h5 style="<%= colors[1] %>"> <strong> Contact: </strong></h5>
+        <p class="blog-text"><%= @project.content_lead %> </p>
+        <h5 style="<%= colors[1] %>"><strong> Problem: </strong></h5>
+        <p class="blog-text"><%= @project.problem %></p>
+
+        <h5 style="<%= colors[1] %>"><strong> Scope: </strong></h5>
+        <p class="blog-text"><%= @project.scope %></p>
+        <h5 style="<%= colors[1] %>"><strong> Goal: </strong></h5>
+        <p class="blog-text"><%= @project.goal %></p>
+        <h5 style="<%= colors[1] %>"><strong> Proposal: </strong></h5>
+        <p class="blog-text"><%= @project.proposal %></p>
+      </div>
+    </div>
+
+<div class="col-lg-4" style="text-align: right; margin-right: 10px;">
+  <%= link_to 'Get Involved!', new_volunteer_path, class: "btn btn-block", style: "background: #{colors[0]}" %>
+
   <%= link_to "#{@project.github_url}/wiki" do %>
-  <i class="fab fa-wikipedia-w text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <i class="fab fa-wikipedia-w text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %> "> </i>
   <% end %>
   <%= link_to @project.github_url do %>
-  <i class="fab fa-github text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <i class="fab fa-github text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %>"> </i>
   <% end %>
   <%= link_to @project.slack do %>
-  <i class="fab fa-slack text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+  <i class="fab fa-slack text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %>"> </i>
   <% end %>
   <% if @project.trello? %>
     <%= link_to @project.trello do %>
-      <i class="fab fa-trello text_color text-right" style="font-size: 300%; margin: 10px;"> </i>
+      <i class="fab fa-trello text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %>"> </i>
     <% end %>
   <% end %>
-
+  <div style="text-align: left; margin-left: 10%;">
+      <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary", style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
+      <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary",style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
+  </div>
 </div>
-<div style="padding: 20px; margin: 10px">
-  <h5 class="text_color"> <strong> Contact: </strong></h5>
-  <p class="blog-text"><%= @project.content_lead %> </p>
-  <h5 class="text_color"><strong> Problem: </strong></h5>
-  <p class="blog-text"><%= @project.problem %></p>
 
-  <h5 class="text_color"><strong> Scope: </strong></h5>
-  <p class="blog-text"><%= @project.scope %></p>
-  <h5 class="text_color"><strong> Goal: </strong></h5>
-  <p class="blog-text"><%= @project.goal %></p>
-  <h5 class="text_color"><strong> Proposal: </strong></h5>
-  <p class="blog-text"><%= @project.proposal %></p>
-</div>
-<div class="col-lg-3" style="text-align: left; margin-left: 10%;">
-    <%= link_to 'Get involved!', new_volunteer_path, class: "btn btn-primary btn-block", size: "30x100", background: colors[2] %>
-    <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary"  if logged_in?(:site_admin) %>
-    <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  if logged_in?(:site_admin) %>
+
+  </div>
 </div>
 <!--
 <div class="col-lg-12 topper row">
