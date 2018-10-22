@@ -1,35 +1,367 @@
-<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-<g>
-<title>Layer 1</title>
-<rect stroke="#000000" stroke-opacity="0" fill="#9516bc" stroke-width="5" x="120" y="58" width="401.00001" height="264.00001" id="svg_1"/>
-<rect stroke="#000000" fill-opacity="0.5" id="svg_15" height="161" width="203" y="164" x="120.00001" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#9a98e0"/>
-<path stroke="#000000" id="svg_34" transform="rotate(-134.8965301513672 120.49974060058594,161.3641815185547) " d="m70.81321,211.10052l0,-99.47268l99.37307,99.47268l-99.37307,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#d098e2"/>
-<path id="svg_28" transform="rotate(134.7804718017578 231.999755859375,163.13528442382812) " stroke="#000000" d="m168.49976,226.63529l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#570472"/>
-<path id="svg_29" transform="rotate(-134.8965301513672 232.999755859375,164.86419677734375) " stroke="#000000" d="m169.49978,228.36419l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#d098e2"/>
-<path transform="rotate(134.7804718017578 321.5,162.00000000000003) " id="svg_26" stroke="#000000" d="m258.00002,225.5l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#570472"/>
-<path id="svg_27" transform="rotate(-134.8965301513672 321.5000305175781,163.72889709472653) " stroke="#000000" d="m258.00004,227.2289l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#cf65f2"/>
-<path id="svg_31" transform="rotate(134.7804718017578 409.499755859375,162.13528442382812) " stroke="#000000" d="m345.99976,225.63529l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#570472"/>
-<path stroke="#000000" id="svg_35" transform="rotate(134.7804718017578 321.499755859375,322.1352844238282) " d="m257.99976,385.6353l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#570472"/>
-<path id="svg_30" transform="rotate(-134.8965301513672 409.499755859375,163.86419677734375) " stroke="#000000" d="m345.99978,227.36419l0,-127l126.99999,127l-126.99999,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#d098e2"/>
-<rect stroke="#000000" id="svg_33" fill-opacity="0.7" height="160.00001" width="113.00001" y="161" x="408" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#2c2aa8"/>
-<rect stroke="#fcf9f9" fill-opacity="0" id="svg_39" height="132" width="132" y="95.92188" x="255.48438" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="7" fill="#000000"/>
-<rect id="svg_46" height="0" width="1" y="210" x="45" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="7" stroke="#f9f9f9" fill="#000000"/>
-<g id="svg_71">
-<rect stroke="#000000" transform="matrix(0.7581567380078986,-0.17326576421031245,0.18051604631939452,0.7277059811608709,45.419481918161694,90.20429530884708) " id="svg_48" height="6.3125" width="99.9375" y="128.75677" x="282.91069" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="#f7f7f7"/>
-<path stroke="#000000" id="svg_57" d="m375.40625,151.22348l0,8.78657l0,0c0,4.85269 -7.49103,8.78657 -16.73169,8.78657c-9.24065,0 -16.73169,-3.93388 -16.73169,-8.78657l0,-8.78657l33.46338,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#f7f7f7"/>
-<line stroke="#fcf9f9" id="svg_58" y2="122.18924" x2="357.19657" y1="151.12063" x1="374.59372" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
-<line stroke="#fcf9f9" id="svg_59" y2="122.91252" x2="357.19657" y1="151.12063" x1="342.08101" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
-<path stroke="#000000" id="svg_61" d="m303.07276,166.58187l0,8.78657l0,0c0,4.8527 -7.49103,8.78657 -16.73169,8.78657c-9.24065,0 -16.73169,-3.93388 -16.73169,-8.78657l0,-8.78657l33.46338,0z" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#f7f7f7"/>
-<line stroke="#fcf9f9" id="svg_62" y2="137.54763" x2="284.86308" y1="166.47901" x1="302.26024" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
-<line stroke="#fcf9f9" id="svg_63" y2="138.27091" x2="284.86308" y1="166.47901" x1="269.74752" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
-<rect stroke="#000000" stroke-opacity="0" id="svg_65" height="70.875" width="5.48437" y="127.64059" x="319.48441" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#f7f7f7"/>
-<rect id="svg_69" height="6.75" width="37.125" y="195.14059" x="303.03128" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f7f7f7"/>
-</g>
-<text xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_72" y="262.07809" x="320.18753" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f9f4f4">Access2justice</text>
-<g id="svg_73">
-<rect stroke="#020000" transform="rotate(90 159.58901977539065,82.25000000000001) " id="svg_16" height="65.86799" width="27.32233" y="49.31601" x="145.92786" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="4" fill="#ffff00"/>
-<text stroke="#020000" transform="matrix(0.4824212431870472,0,0,0.5852756734556622,58.185394532319464,140.9385066692514) " font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_36" y="-90.85418" x="209.13924" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">&lt; PDX /&gt;</text>
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="265"
+   version="1.1"
+   id="svg118"
+   sodipodi:docname="a2j.svg"
+   inkscape:export-filename="/home/hugh/workspace/codeforpdx/app/assets/images/a2j.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.3 (d244b95, 2018-08-02)">
+  <metadata
+     id="metadata124">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs122" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     id="namedview120"
+     showgrid="false"
+     inkscape:zoom="2.4716981"
+     inkscape:cx="131.22137"
+     inkscape:cy="132.5"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg118" />
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <g
+     class="layer"
+     id="g116">
+    <title
+       id="title87">Layer 1</title>
+    <rect
+       fill="#9516bc"
+       height="264.00001"
+       id="svg_1"
+       stroke="#000000"
+       stroke-opacity="0"
+       stroke-width="5"
+       width="401.00001"
+       x="0"
+       y="1" />
+    <rect
+       fill="#9a98e0"
+       fill-opacity="0.5"
+       height="161"
+       id="svg_15"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       width="203"
+       x="0.00001"
+       y="107" />
+    <path
+       d="m-49.18679,154.10052l0,-99.47268l99.37307,99.47268l-99.37307,0z"
+       fill="#d098e2"
+       id="svg_34"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(-134.897 0.499732 104.364)" />
+    <path
+       d="m48.49976,169.63529l0,-127l126.99999,127l-126.99999,0z"
+       fill="#570472"
+       id="svg_28"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(134.78 112 106.135)" />
+    <path
+       d="m49.49978,171.36419l0,-127l126.99999,127l-126.99999,0z"
+       fill="#d098e2"
+       id="svg_29"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(-134.897 113 107.864)" />
+    <path
+       d="m138.00002,168.5l0,-127l126.99999,127l-126.99999,0z"
+       fill="#570472"
+       id="svg_26"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(134.78 201.5 105)" />
+    <path
+       d="m138.00004,170.2289l0,-127l126.99999,127l-126.99999,0z"
+       fill="#cf65f2"
+       id="svg_27"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(-134.897 201.5 106.729)" />
+    <path
+       d="m225.99976,168.63529l0,-127l126.99999,127l-126.99999,0z"
+       fill="#570472"
+       id="svg_31"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(134.78 289.5 105.135)" />
+    <path
+       d="m137.99976,328.6353l0,-127l126.99999,127l-126.99999,0z"
+       fill="#570472"
+       id="svg_35"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(134.78 201.5 265.135)" />
+    <path
+       d="m225.99978,170.36419l0,-127l126.99999,127l-126.99999,0z"
+       fill="#d098e2"
+       id="svg_30"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       transform="rotate(-134.897 289.5 106.864)" />
+    <rect
+       fill="#2c2aa8"
+       fill-opacity="0.7"
+       height="160.00001"
+       id="svg_33"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="5"
+       width="113.00001"
+       x="288"
+       y="104" />
+    <rect
+       fill="#000000"
+       fill-opacity="0"
+       height="132"
+       id="svg_39"
+       stroke="#fcf9f9"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-width="7"
+       width="132"
+       x="135.48438"
+       y="38.92188" />
+    <rect
+       fill="#000000"
+       height="0"
+       id="svg_46"
+       stroke="#f9f9f9"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-width="7"
+       width="1"
+       x="44"
+       y="210" />
+    <g
+       id="svg_71">
+      <rect
+         fill="#f7f7f7"
+         height="6.3125"
+         id="svg_48"
+         stroke="#000000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-opacity="0"
+         transform="matrix(0.758157 -0.173266 0.180516 0.727706 45.4195 90.2043)"
+         width="99.9375"
+         x="150.772971"
+         y="18.966617" />
+      <path
+         d="m255.40625,94.22348l0,8.78657l0,0c0,4.85269 -7.49103,8.78657 -16.73169,8.78657c-9.24065,0 -16.73169,-3.93388 -16.73169,-8.78657l0,-8.78657l33.46338,0z"
+         fill="#f7f7f7"
+         id="svg_57"
+         stroke="#000000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-opacity="0"
+         stroke-width="null" />
+      <line
+         fill="none"
+         id="svg_58"
+         stroke="#fcf9f9"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="null"
+         x1="254.59372"
+         x2="237.19657"
+         y1="94.12063"
+         y2="65.18924" />
+      <line
+         fill="none"
+         id="svg_59"
+         stroke="#fcf9f9"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="null"
+         x1="222.08101"
+         x2="237.19657"
+         y1="94.12063"
+         y2="65.91252" />
+      <path
+         d="m183.07276,109.58187l0,8.78657l0,0c0,4.8527 -7.49103,8.78657 -16.73169,8.78657c-9.24065,0 -16.73169,-3.93388 -16.73169,-8.78657l0,-8.78657l33.46338,0z"
+         fill="#f7f7f7"
+         id="svg_61"
+         stroke="#000000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-opacity="0"
+         stroke-width="null" />
+      <line
+         fill="none"
+         id="svg_62"
+         stroke="#fcf9f9"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="null"
+         x1="182.26024"
+         x2="164.86308"
+         y1="109.47901"
+         y2="80.54763" />
+      <line
+         fill="none"
+         id="svg_63"
+         stroke="#fcf9f9"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="null"
+         x1="149.74752"
+         x2="164.86308"
+         y1="109.47901"
+         y2="81.27091" />
+      <rect
+         fill="#f7f7f7"
+         height="70.875"
+         id="svg_65"
+         stroke="#000000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-opacity="0"
+         stroke-width="0"
+         width="5.48437"
+         x="199.48441"
+         y="70.64059" />
+      <rect
+         fill="#f7f7f7"
+         height="6.75"
+         id="svg_69"
+         stroke="#000000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-opacity="0"
+         stroke-width="0"
+         width="37.125"
+         x="183.03128"
+         y="138.14059" />
+    </g>
+    <text
+       fill="#f9f4f4"
+       font-family="Monospace"
+       font-size="24"
+       id="svg_72"
+       stroke="#000000"
+       stroke-dasharray="null"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       stroke-opacity="0"
+       stroke-width="0"
+       text-anchor="middle"
+       x="200.18753"
+       xml:space="preserve"
+       y="205.07809">Access2justice</text>
+    <g
+       id="svg_73">
+      <rect
+         fill="#ffff00"
+         height="65.86799"
+         id="svg_16"
+         stroke="#020000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="4"
+         transform="rotate(90 39.589 25.25)"
+         width="27.32233"
+         x="25.92786"
+         y="-7.68399" />
+      <text
+         fill="#000000"
+         font-family="Monospace"
+         font-size="24"
+         font-weight="bold"
+         id="svg_36"
+         stroke="#020000"
+         stroke-dasharray="null"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         stroke-width="0"
+         text-anchor="middle"
+         transform="matrix(0.482421 0 0 0.585276 -60.8146 83.9385)"
+         x="207.066362"
+         xml:space="preserve"
+         y="-90.85418">&lt; PDX /&gt;</text>
+    </g>
+  </g>
 </svg>

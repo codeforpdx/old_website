@@ -1,34 +1,39 @@
 <div id="main_featurette">
-  <div class="container featurette col-md-8 offset-md-2 col-xl-6 offset-xl-3" id="main-text">
-    <h1 class="featurette-heading background_xparent_orange" id="main-title">
-       Code for PDX
+  <div id="titlecontainer">
+    <h1>
+       <strong><span>Code </span></strong>
+       <span><em>for</em></span>
+       <strong>
+         <span id="pdx"> PDX </span>
+       </strong>
     </h1>
-    <p class="lead"  id="subtitle-text">
-     As a <a href="http://www.codeforamerica.org" target="_blank" style="color: blue;"> Code for America Brigade </a>,
+    <p>
+     As a <a href="http://www.codeforamerica.org" target="_blank"> Code for America Brigade </a>,
       we're part of a national network of civic-minded volunteers
       who contribute their skills toward using the web
       as a platform for local government and community service.
-      Let’s all build it together.
     </p>
-  </div>
 
+  </div>
 </div>
 
-<div class="row featurette featurette_main background_white">
-  <div class="container text-left">
+<div class="background_white featurecontainer">
+  <div class="sectionleft">
     <% if @meeting %>
-    <div class="row">
-      <div class="col-lg-8 background_white" style="color: black; padding: 20px;">
-    <h1> Next Meeting: <%= @meeting.title %> </h1>
-    <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
-    <h2 class=><%= @meeting.location %> </h2>
-    <p> This will be the official launch of Code for PDX.
-      We have so much to share with you folks!
-      We will introduce our first projects, our partners, and talk about our process.</p>
-      <%= link_to "RSVP NOW!", @meeting.url, class:"btn btn-lg btn-block background_red", target: "_blank" %>
-
+      <h1> Next Meeting: <%= @meeting.title %> </h1>
+      <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
+      <h2 class=><%= @meeting.location %> </h2>
+      <p> This will be the official launch of Code for PDX.
+        We have so much to share with you folks!
+        We will introduce our first projects, our partners, and talk about our process.</p>
+        <%= link_to  @meeting.url, target: "_blank" do  %>
+          <div class="button" id="meetupbutton">
+            <h5>RSVP NOW!</h5>
+        </div>
+      <% end %>
     </div>
-    <div class="col-lg-4">
+
+    <div class="sectionright">
       <iframe src= '<%= @meeting.googlemapurl %>'
               width="400"
               height="350"
@@ -37,55 +42,60 @@
               allowfullscreen>
       </iframe>
     </div>
-  </div>
+
   <% else %>
-  <div class="row">
-    <div class="col-lg-12">
-  <h1 class="text_color"> Next Meeting: To Be Announced </h1>
-  <h2 class=>Biweekly Hackathons: TBA </h2>
-  <p> Checkout our projects!</p>
-
-  </div>
-
-</div>
+    <div class="row">
+      <div class="col-lg-12">
+          <h1 class="text_color"> Next Meeting: To Be Announced </h1>
+          <h2 class=>Biweekly Hackathons: TBA </h2>
+      </div>
+    </div>
   <% end %>
 </div>
+
+<hr>
+<div class="sectionheader">
+  <h1>Check Out Our Current Projects!</h1>
 </div>
+<div id="projectcontainer">
 
-<div class="background_image text_white">
 
-  <div style="text-align: center;">
-    <h2 class=" text_white">Check Out Our Current Projects!</h2>
-  </div>
-
-  <div class="row">
   <% @projects.each do |project| %>
-  <div class="col-lg-3" style="margin: 10px 20px;">
-  <%= link_to "/projects/#{project.id}" do %>
-          <%= image_tag project.img, alt: project.title, width: "155%", height: "110%"%>
+    <div class="projects" style="background: <%= project.color %>;">
+      <%= link_to "/projects/#{project.id}" do %>
+        <div style="color: white;">
+          <%= image_tag project.img, alt: project.title, margin: "20px" %>
+        </div>
+        <div style="color: white; text-align: left;">
+          <h3> <%= project.title %> </h3>
+          <p> <%= project.proposal %> </p>
         </div>
       <% end %>
+    </div>
     <% end %>
-  </div>
 </div>
 
-<div class="featurette_main background_white text_color">
-<div class="container col-md-8 offset-md-2 col-xl-6 offset-xl-3 ">
-  <div class="container">
-    <h3>Blog:</h3>
+<hr>
 
-    <div class="row featurette blog">
-      <div class="col-lg-8">
+<div class="featurecontainer" >
+  <div class="sectionheader ">
+    <h2>Latest News</h2>
+    <br>
+  </div>
+
+  <div id="newsimage">
+      <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
+        <%= image_tag "https://via.placeholder.com/500x350" %>
+        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title  %>
+      <% end %>
+  </div>
+
+  <div id="newsbody">
         <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-          <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, class:"img-fluid mx-auto latest-post-img"  %>
-        <% end %>
-      </div>
-      <div class="col-lg">
-        <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-          <h2 class="headline"><%= @blogs[@count - 1].title %></h2>
-          <h4 class="lede"><%= @blogs[@count - 1].subtitle %></h4>
+          <h2 class=""><%= @blogs[@count - 1].title %></h2>
+          <h4 class=""><%= @blogs[@count - 1].subtitle %></h4>
           <p>
-            <span class="lede author">
+            <span class="">
               <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
                 Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %>
               <% else %>
@@ -94,18 +104,48 @@
             </span>
           </p>
         <% end %>
-      </div>
+        <p><%= @blogs[@count - 1].text %> </p>
+        <br>
+        <%= link_to blogs_path  do %>
+            More blog posts <i class="fas fa-arrow-right"></i>
+        <% end %>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="featurecontainer" style="margin: 40px 50px;">
+    <div class="sectionheader">
+      <h1>Our Partners</h1>
     </div>
-    <br>
-    <%= link_to blogs_path  do %>
-      More blog posts <i class="fas fa-arrow-right"></i>
+
+  <div class="partner">
+    <%= link_to "https://www.clackamas.us/h3s", target: "_blank" do %>
+      <%= image_tag "chhhs.jpg", alt: "Clackamas County HHHS", width: "450px", height:"200px;", margin: "20px"%>
     <% end %>
   </div>
+  <div class="partner">
+    <%= link_to "https://thecommonslawcenter.org/", target: "_blank" do %>
+      <%= image_tag "commonslaw.png", alt: "Commons Law Center", width: "400px", height:"150px;", margin:"20px;"%>
+    <% end %>
+  </div>
+  <div class="partner">
+                          >
+    <%= link_to "https://www.mpdlaw.com/", target: "_blank" do %>
+      <%= image_tag "metro.jpg", alt: "Metropolitan Public Defender's Office", width: "400px", height:"100px;", margin:"20px;"%>
+    <%  end %>
+
+  </div>
+
 </div>
-</div>
-<div class="container col-xl-12 background_darkblue text_white featurette_main">
-  <div class="container contact">
-    <h3>Get In Touch:</h3>
+
+<div class="featurecontainer background_darkblue">
+  <div class="contact spaced text_white"  style="margin:20px 80px;">
+    <br>
+    <div class="text_white">
+      <h1>Get In Touch:</h1>
+    </div>
     <p>
       <i class="far fa-check-square text_greenblue "></i>
       Get started easily with our
@@ -133,20 +173,28 @@
       for the updates on when and where we're meeting.
     </p>
   </div>
-
-  <h1 class="text_color"> Support Code for PDX </h1>
-  <p>
-    Our Supporters.
-    We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
-    While Code for America subsidizes our operating costs,
-    if Code for PDX is to continue its mission we will soon need the financial support of local sponsors,
-    By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
-    Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
-  </p>
-  <div class="col-lg 12 text-center">
-    <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "btn background_greenblue btn-lg" %>
-  </div>
+  <br>
 </div>
+<hr>
+<div class="featurecontainer">
+    <div class="sectionheader" style="padding: 10px 20px;">
+      <h2> Support Code for PDX </h2>
+    </div>
+    <div>
+      <p>
+        Our Supporters.
+        We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
+        While Code for America subsidizes our operating costs,
+        if Code for PDX is to continue its mission we will soon need the financial support of local sponsors,
+        By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
+        Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
+      </p>
+    </div>
+    <div style="text-align: center;">
+      <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "button" %>
+    </div>
+  </div>
+
 
 
 
