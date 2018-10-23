@@ -80,7 +80,7 @@
 .featurecontainer{
   width: 100%;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .sectionleft{
@@ -338,8 +338,13 @@
 .background_greenblue{
   background-color: #00B3A7;
 }
+
 .background_lightblue{
   background-color: #96BFE5;
+}
+
+.background_lightgray{
+  background-color: #dddddd;
 }
 
 .background_red{
