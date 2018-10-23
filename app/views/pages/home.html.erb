@@ -75,9 +75,8 @@
     <% end %>
 </div>
 
-<hr>
 
-<div class="featurecontainer background_image text_white" >
+<div class="featurecontainer background_greenblue text_white" >
   <div class="sectionheader ">
     <h2>Latest News</h2>
     <br>
@@ -85,7 +84,7 @@
 
   <div id="newsimage">
       <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title  %>
+        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, width: "400px", height: "300px" %>
       <% end %>
   </div>
 
@@ -111,8 +110,6 @@
   </div>
 
 </div>
-
-<hr>
 
 <div class="featurecontainer background_lightgray">
     <div class="sectionheader">
