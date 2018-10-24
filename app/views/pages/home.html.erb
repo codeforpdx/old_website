@@ -68,7 +68,7 @@
         </div>
         <div style="color: white; text-align: left;">
           <h3> <%= project.title %> </h3>
-          <p> <%= project.proposal %> </p>
+          <p> <%= project.text %> </p>
         </div>
       <% end %>
     </div>
@@ -76,7 +76,7 @@
 </div>
 
 
-<div class="featurecontainer background_greenblue text_white" >
+<div class="featurecontainer background_greenblue text_white" style="min-height: 500px;">
   <div class="sectionheader ">
     <h2>Latest News</h2>
     <br>
@@ -84,7 +84,7 @@
 
   <div id="newsimage">
       <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, width: "400px", height: "300px" %>
+        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, width: "500px", height: "450px" %>
       <% end %>
   </div>
 
@@ -111,7 +111,7 @@
 
 </div>
 
-<div class="featurecontainer background_lightgray">
+<div class="featurecontainer background_lightgray" style="min-height: 500px; padding: 40px;">
     <div class="sectionheader">
       <h1>Our Partners</h1>
     </div>
@@ -176,7 +176,7 @@
     <div class="sectionheader" style="padding: 10px 20px;">
       <h2> Support Code for PDX </h2>
     </div>
-    <div>
+    <div style="padding: 60px 60px;">
       <p>
         Our Supporters.
         We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
