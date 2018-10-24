@@ -6,7 +6,7 @@
 <% when "#e2841f" %>
 <% colors = ["#e2841f","#eaa862","#b46918"] %>
 <% else %>
-<% colors = ["#5e3c58", "#7e6279", "#412a3d"] %>
+<% colors = ["#5907f2","#d098e2","#570472"] %>
 <% end %>
 <style>
 
@@ -40,13 +40,10 @@
         <p class="blog-text"><%= @project.content_lead %> </p>
         <h5 style="<%= colors[1] %>"><strong> Problem: </strong></h5>
         <p class="blog-text"><%= @project.problem %></p>
-
         <h5 style="<%= colors[1] %>"><strong> Scope: </strong></h5>
         <p class="blog-text"><%= @project.scope %></p>
-        <h5 style="<%= colors[1] %>"><strong> Goal: </strong></h5>
-        <p class="blog-text"><%= @project.goal %></p>
         <h5 style="<%= colors[1] %>"><strong> Proposal: </strong></h5>
-        <p class="blog-text"><%= @project.proposal %></p>
+        <p class="blog-text"><%= @project.text %></p>
       </div>
     </div>
 
