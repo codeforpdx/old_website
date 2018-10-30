@@ -81,7 +81,12 @@ gem 'devise', '~> 4.5'
 
 #for authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+#for markdown and syntax highlighting
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.2'
 #for env secret
+
 #
 # # gem 'omniauth', '~> 1.8', '>= 1.8.1'
 # #

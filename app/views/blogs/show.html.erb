@@ -1,23 +1,16 @@
 
 <% colors = ["#00bfbf", "#007f7f", "#007f7f"] %>
-<svg width="100%" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
- <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
- <g class="layer">
-  <title>Layer 1</title>
-  <path d="m0,58l-0.5,177.5l3035,100l-1,-274l-633.5,-3.5z" fill=<%= colors[0] %> id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
-    <path d="m485.0325,269.13748l0,-1l1,1l-1,0z" fill="#007f7f" id="svg_25" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
-  <path d="m354.61746,354.1575l0,0c-80.90972,0 -146.50001,-67.60498 -146.50001,-151l0,0c0,-83.395 65.59028,-151 146.50001,-151l0,0c38.85422,0 76.11707,15.90888 103.59114,44.22687c27.47408,28.318 42.90887,66.72543 42.90887,106.77313l0,0c0,40.04769 -15.43479,78.45513 -42.90887,106.77311l42.90887,0l0,44.22689l-146.50001,0z" fill="#00ffff" id="svg_3" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
-  <text xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_72" y="170" x="70%" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#f9f4f4"><%= @blog.title%></text>
- </g>
-</svg>
 
-<div class="container">
+
+<div class="container" style="margin-top: 150px; ">
   <div class="row">
 
     <div class="col-lg-11" >
         <%= image_tag @blog.img, alt: @blog.title, size:"600x400", margin: "0 auto"%>
+    </div>
 
       <div style="padding: 20px; margin: 10px">
+        <div>
         <%= link_to blogs_path do %>
           <i class="fas fa-arrow-circle-left text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
         <% end %>
@@ -31,28 +24,21 @@
           <i class="fas fa-trash-alt text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>
           <% end %>
         <% end %>
-
+        </div>
+        <div>
         <% if @blog.updated_at > @blog.created_at %>
           Updated <%= @blog.updated_at.to_s[5,5] %>
         <% else %>
           <h5 style="color: <%= colors[1] %>"> <%= @blog.created_at.to_s[5,5] %> </h5>
         <% end %>
-        <h5 style="color: <%= colors[1] %>"> <strong><%= @blog.subtitle %></strong></h5>
-        <p style="color: black;" class="blog-text"><%= @blog.text %> </p>
+        <h1 style="color: <%= colors[1] %>"> <strong><%= @blog.title %></strong></h1>
+        <h5 style="color: <%= colors[1] %>"> <%= @blog.subtitle %></h5>
+        <p style="color: black;" class="blog-text"><%= markdown @blog.text %> </p>
+        </div>
       </div>
     </div>
-
 
   </div>
 </div>
 
-
-
-<div class="container col-md-6 offset-md-3">
-  <div class="container">
-    <p id="notice"><%= notice %></p>
-
-
-    </div>
-  </div>
 </div>
