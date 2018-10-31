@@ -75,36 +75,40 @@
 </div>
 
 
-<div class="featurecontainer background_greenblue text_white" style="min-height: 600px;">
-  <div class="sectionheader text_white">
+<div class="featurecontainer background_greenblue text_white" style="
+width: 100%;
+background-image: <%= image_url @blog.img %>;
+background-repeat: no-repeat;
+background-size: cover;
+border-top: 2px solid #ffff;
+padding-bottom: 3rem;
+margin-top: 50px;
+background-color: #340086;
+min-height: 550px;
+background-position: center;
+">
+  <div class="sectionheader text_white" style="padding: 50px;">
     <h1>Latest News</h1>
     <br>
   </div>
 
-  <div id="newsimage">
-      <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-        <%= image_tag @blogs[@count - 1].img, alt: @blogs[@count - 1].title, width: "600px", height: "400px" %>
-      <% end %>
-  </div>
-
   <div id="newsbody">
-        <%= link_to "/blogs/#{@blogs[@count-1].id}" do %>
-          <h2 class=""><%= @blogs[@count - 1].title %></h2>
-          <h4 class=""><%= @blogs[@count - 1].subtitle %></h4>
+        <%= link_to "/blogs/#{@blog.id}" do %>
+          <h2 class="text_greenblue"><%= @blog.title %></h2>
+          <h4 class="text_greenblue"><%= @blog.subtitle %></h4>
           <p>
-            <span class="">
-              <% if @blogs[@count-1].updated_at > @blogs[@count-1].created_at %>
-                Updated <%= @blogs[@count - 1].updated_at.to_s[5,5] %>
+            <span class="text_white">
+              <% if @blog.updated_at > @blog.created_at %>
+                Updated <%= @blog.updated_at.to_s[5,5]%>
               <% else %>
-                <%= @blogs[@count - 1].created_at.to_s[5,5] %>
+                <%= @blog.created_at.to_s[5,5] %>
               <% end %>
             </span>
           </p>
         <% end %>
-        <p><%= @blogs[@count - 1].text %> </p>
         <br>
         <%= link_to blogs_path  do %>
-            More blog posts <i class="fas fa-arrow-right"></i>
+            <p class="text_greenblue"> Read More <i class="fas fa-arrow-right"></i> </p>
         <% end %>
   </div>
 

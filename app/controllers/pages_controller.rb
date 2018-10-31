@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  
+
   def home
     @count = Blog.count
-    @blogs = Blog.all
+    @blog = Blog.last
     @projects = Project.all
     @meeting = Meeting.last
   end
