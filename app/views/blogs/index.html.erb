@@ -24,7 +24,7 @@
           <div style="maring: 30px; padding: 30px 50px; background: rgba(0,0,0,0.5)">
             <%= link_to "/blogs/#{blog.id}" do %>
               <h2 class="text_white"><%= blog.title %></h2>
-              <h4 class="lede"><%= blog.subtitle %></h4>
+              <h4 class="lede text_white"><%= blog.subtitle %></h4>
               <p>
                 <span class="leed author">
                   <% if blog.updated_at > blog.created_at %>

@@ -87,15 +87,15 @@ margin-top: 50px;
 min-height: 550px;
 background-position: center;
 ">
-  <div class="sectionheader text_white" style="padding: 50px;">
+  <div class="sectionheader text_greenblue" style="padding: 50px;">
     <h1>Latest News</h1>
     <br>
   </div>
 
   <div id="newsbody">
         <%= link_to "/blogs/#{@blog.id}" do %>
-          <h2 class="text_greenblue"><%= @blog.title %></h2>
-          <h4 class="text_greenblue"><%= @blog.subtitle %></h4>
+          <h2 class="text_white"><%= @blog.title %></h2>
+          <h4 class="text_white"><%= @blog.subtitle %></h4>
           <p>
 
             <span class="text_white">
@@ -106,7 +106,9 @@ background-position: center;
               <% end %>
             </span>
           </p>
+
         <% end %>
+        <p class="text-white"><%= markdown @blog.text[0,200] %>...</p>
         <br>
         <%= link_to blogs_path  do %>
             <p class="text_greenblue"> Read More <i class="fas fa-arrow-right"></i> </p>
