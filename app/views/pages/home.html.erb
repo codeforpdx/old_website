@@ -74,7 +74,9 @@
     <% end %>
 </div>
 
-<div class="sectionheader text_greenblue" style="padding: 50px;">
+<hr>
+
+<div class="sectionheader text_color">
   <h1>Latest News</h1>
 </div>
 
@@ -106,12 +108,11 @@ background-position: center;
               <% end %>
             </span>
           </p>
-
         <% end %>
         <p class="text-white"><%= markdown @blog.text[0,200] %>...</p>
         <br>
         <%= link_to blogs_path  do %>
-            <p class="text_greenblue"> Read More <i class="fas fa-arrow-right"></i> </p>
+            <p class="text_greenblue"> Click Here For the Latest News <i class="fas fa-arrow-right"></i> </p>
         <% end %>
   </div>
 

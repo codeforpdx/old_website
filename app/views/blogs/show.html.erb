@@ -1,3 +1,14 @@
+<head>
+  <meta property="og:title" content= <%= @blog.title %> />
+  <meta property="og:description" content= <%= @blog.subtitle %> />
+  <meta property="og:image"  content= <%= image_path @blog.img %> />
+  <meta name="twitter:title" content=<%= @blog.title %>>
+  <meta name="twitter:description" content=<%= @blog.subtitle %> >
+  <meta name="twitter:image" content=<%= image_path @blog.img %>>
+  <meta name="twitter:card" content=<%= image_path @blog.img %>>
+  <meta name="twitter:site" content="@codeforpdx">
+</head>
+
 
 <% colors = ["#00bfbf", "#007f7f", "#007f7f"] %>
 <div style="
@@ -12,8 +23,8 @@ background-color: #340086;
 height: 500px;
 background-position: center;
 ">
-  <div id="titlecontainer" style="background: rgba(100,100,100,0.5); padding: 10px; text-align: center;">
-    <h1>
+  <div id="titlecontainer" style="background: rgba(0,0,0,0.5); padding: 10px; text-align: center;">
+    <h1 style="text-align: center;">
        <strong><span><%= @blog.title %> </span></strong>
     </h1>
     <p>
