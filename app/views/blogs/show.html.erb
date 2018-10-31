@@ -5,11 +5,11 @@
 <div class="container" style="margin-top: 150px; ">
   <div class="row">
 
-    <div class="col-lg-11" >
+    <div class="col-lg-6" >
         <%= image_tag @blog.img, alt: @blog.title, size:"600x400", margin: "0 auto"%>
     </div>
 
-      <div style="padding: 20px; margin: 10px">
+      <div class="col-lg-6" style="padding: 20px; margin: 10px">
         <div>
         <%= link_to blogs_path do %>
           <i class="fas fa-arrow-circle-left text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[0] %> "> </i>

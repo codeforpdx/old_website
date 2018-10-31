@@ -34,21 +34,22 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-lg-7" style="background: <%= colors[1] %>">
+    <div class="col-lg-6">
       <div style="padding: 20px; margin: 10px">
-        <h5 style="<%= colors[1] %>"> <strong> Contact: </strong></h5>
-        <p class="blog-text"><%= @project.content_lead %> </p>
-        <h5 style="<%= colors[1] %>"><strong> Problem: </strong></h5>
-        <p class="blog-text"><%= @project.problem %></p>
-        <h5 style="<%= colors[1] %>"><strong> Scope: </strong></h5>
-        <p class="blog-text"><%= @project.scope %></p>
-        <h5 style="<%= colors[1] %>"><strong> Proposal: </strong></h5>
-        <p class="blog-text"><%= @project.text %></p>
+        <h5 style="color: <%= colors[2] %>"> <strong> Contact: </strong></h5>
+        <p class="blog-text"><%= markdown @project.content_lead %> </p>
+        <h5 style="color: <%= colors[2] %>"><strong> Problem: </strong></h5>
+        <p class="blog-text" style="color: black;"><%= markdown @project.problem %></p>
+        <h5 style="color: <%= colors[2] %>"><strong> Scope: </strong></h5>
+        <p class="blog-text" style="color: black;"><%= markdown @project.scope %></p>
+        <h5 style="color: <%= colors[2] %>"><strong> Proposal: </strong></h5>
+        <p><%= markdown @project.proposal %></p>
       </div>
     </div>
 
-<div class="col-lg-4" style="text-align: right; margin-right: 10px;">
-  <%= link_to 'Get Involved!', new_volunteer_path, class: "btn btn-block", style: "background: #{colors[0]}" %>
+<div class="col-lg-5" style="text-align: right; margin-right: 10px; background: <%= colors[0] %>">
+  <br>
+  <%= link_to 'Get Involved!', new_volunteer_path, class: "btn btn-block", style: "background: #{colors[2]}" %>
 
   <%= link_to "#{@project.github_url}/wiki" do %>
   <i class="fab fa-wikipedia-w text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %> "> </i>
@@ -64,10 +65,13 @@
       <i class="fab fa-trello text_color text-right" style="font-size: 300%; margin: 10px; color: <%= colors[1] %>"> </i>
     <% end %>
   <% end %>
+  <%= image_tag @project.img %>
+
   <div style="text-align: left; margin-left: 10%;">
-      <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary", style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
-      <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary",style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
+      <%= link_to 'Edit', edit_project_path(@project), class: "btn", style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
+      <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn",style: "background: #{colors[2]}"   if logged_in?(:site_admin) %>
   </div>
+
 </div>
 
 
