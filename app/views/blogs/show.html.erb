@@ -1,7 +1,7 @@
 
 <% colors = ["#00bfbf", "#007f7f", "#007f7f"] %>
 <div style="
-background-image: <%= image_url @blog.img %>;
+background-image: url(<%= image_path @blog.img %>);
 width: 100%;
 background-repeat: no-repeat;
 background-size: cover;

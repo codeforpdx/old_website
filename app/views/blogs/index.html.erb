@@ -9,7 +9,7 @@
       <% for blog in @blogs.each do %>
 
           <div style= "
-          background-image: <%= image_url blog.img %>;
+          background-image: url(<%= image_path blog.img %>);
           width: 100%;
           background-repeat: no-repeat;
           background-size: cover;
