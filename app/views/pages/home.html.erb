@@ -97,10 +97,7 @@ background-position: center;
           <h2 class="text_greenblue"><%= @blog.title %></h2>
           <h4 class="text_greenblue"><%= @blog.subtitle %></h4>
           <p>
-            <% if @blog.img_url == nil %>
-              <p> nil </p>
-            <% end %>
-            <%= @blog.img_url %>
+
             <span class="text_white">
               <% if @blog.updated_at > @blog.created_at %>
                 Updated <%= @blog.updated_at.to_s[5,5]%>
