@@ -90,7 +90,6 @@
 .sectionleft{
   float: left;
   padding: 50px;
-  width: 60%;
 }
 .sectionright{
   float: right;
@@ -99,8 +98,8 @@
 }
 #projectcontainer{
   width: 100%;
-  display: inline-block;
-  margin: 2% 5%;
+  display: block;
+  padding: 3%;
 }
 .projects{
   display: inline-block;

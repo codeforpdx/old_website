@@ -16,41 +16,46 @@
   </div>
 </div>
 
-<div class="background_white featurecontainer" style="color:black;">
-  <div class="sectionleft">
-    <% if @meeting %>
-      <h1> Next Meeting: <%= @meeting.title %> </h1>
-      <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
-      <h2 class=><%= @meeting.location %> </h2>
-      <p> This will be the official launch of Code for PDX.
-        We have so much to share with you folks!
-        We will introduce our first projects, our partners, and talk about our process.</p>
-        <%= link_to  @meeting.url, target: "_blank" do  %>
-          <div class="button" id="meetupbutton">
-            <h5>RSVP NOW!</h5>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-8" style="color:black;">
+        <% if @meeting %>
+          <h1> Next Meeting: <%= @meeting.title %> </h1>
+          <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
+          <h2 class=><%= @meeting.location %> </h2>
+          <p> This will be the official launch of Code for PDX.
+            We have so much to share with you folks!
+            We will introduce our first projects, our partners, and talk about our process.</p>
+            <%= link_to  @meeting.url, target: "_blank" do  %>
+              <div class="button" id="meetupbutton">
+                <h5>RSVP NOW!</h5>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-md-2">
+          <iframe src= '<%= @meeting.googlemapurl %>'
+                  width="400"
+                  height="350"
+                  frameborder="0"
+                  style="border:0"
+                  allowfullscreen>
+          </iframe>
+        </div>
+
+      <% else %>
+        <div class="row">
+          <div class="col-lg-12">
+              <h1 class="text_color"> Next Meeting: To Be Announced </h1>
+              <h2 class=>Biweekly Hackathons: TBA </h2>
+          </div>
         </div>
       <% end %>
     </div>
-
-    <div class="sectionright">
-      <iframe src= '<%= @meeting.googlemapurl %>'
-              width="400"
-              height="350"
-              frameborder="0"
-              style="border:0"
-              allowfullscreen>
-      </iframe>
-    </div>
-
-  <% else %>
-    <div class="row">
-      <div class="col-lg-12">
-          <h1 class="text_color"> Next Meeting: To Be Announced </h1>
-          <h2 class=>Biweekly Hackathons: TBA </h2>
-      </div>
-    </div>
-  <% end %>
+  </div>
 </div>
+
 
 <hr>
 <div class="sectionheader">
@@ -67,7 +72,7 @@
         </div>
         <div style="color: white; text-align: left;">
           <h3> <%= project.title %> </h3>
-          <p> <%= project.text %> </p>
+          <p> <%= markdown project.text %> </p>
         </div>
       <% end %>
     </div>
