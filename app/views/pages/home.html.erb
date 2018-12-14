@@ -24,9 +24,7 @@
           <h1> Next Meeting: <%= @meeting.title %> </h1>
           <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
           <h2 class=><%= @meeting.location %> </h2>
-          <p> This will be the official launch of Code for PDX.
-            We have so much to share with you folks!
-            We will introduce our first projects, our partners, and talk about our process.</p>
+          <p> <%= @meeting.body %> </p>
             <%= link_to  @meeting.url, target: "_blank" do  %>
               <div class="button" id="meetupbutton">
                 <h5>RSVP NOW!</h5>
