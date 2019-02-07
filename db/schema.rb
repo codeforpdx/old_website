@@ -37,14 +37,6 @@ ActiveRecord::Schema.define(version: 20181012193933) do
     t.text "googlemapurl"
   end
 
-  create_table "news", force: :cascade do |t|
-    t.string "title"
-    t.text "text"
-    t.text "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "subtitle"
@@ -63,6 +55,7 @@ ActiveRecord::Schema.define(version: 20181012193933) do
     t.string "color"
     t.text "trello"
     t.text "slack"
+    t.text "slides"
   end
 
   create_table "team_members", force: :cascade do |t|
@@ -84,16 +77,7 @@ ActiveRecord::Schema.define(version: 20181012193933) do
     t.text "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "provider"
-    t.string "uid"
-    t.text "image"
     t.string "position"
-    t.index ["email"], name: "index_teammates_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_teammates_on_reset_password_token", unique: true
   end
 
   create_table "users", force: :cascade do |t|
