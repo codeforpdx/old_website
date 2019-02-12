@@ -1,205 +1,83 @@
-<div id="main_featurette">
-  <div id="titlecontainer">
-    <h1>
-       <strong><span>Code </span></strong>
-       <span><em>for</em></span>
-       <strong>
-         <span id="pdx"> PDX </span>
-       </strong>
-    </h1>
-    <p>
-     As a <a href="http://www.codeforamerica.org" target="_blank"> Code for America Brigade </a>,
-      we're part of a national network of civic-minded volunteers
-      who contribute their skills toward using the web
-      as a platform for local government and community service.
-    </p>
-  </div>
-</div>
 
-<div class="container">
-  <br>
-  <div class="row">
-    <div class="col-md-8" style="color:black;">
-        <% if @meeting %>
-          <h1> Next Meeting: <%= @meeting.title %> </h1>
-          <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
-          <h2 class=><%= @meeting.location %> </h2>
-          <p> <%= @meeting.body %> </p>
-            <%= link_to  @meeting.url, target: "_blank" do  %>
-              <div class="button" id="meetupbutton">
-                <h5>RSVP NOW!</h5>
-            </div>
-          <% end %>
-        </div>
-
-        <div class="col-md-2">
-          <iframe src= '<%= @meeting.googlemapurl %>'
-                  width="400"
-                  height="350"
-                  frameborder="0"
-                  style="border:0"
-                  allowfullscreen>
-          </iframe>
-        </div>
-
-      <% else %>
-        <div class="row">
-          <div class="col-lg-12">
-              <h1 class="text_color"> Next Meeting: To Be Announced </h1>
-              <h2 class=>Biweekly Hackathons: TBA </h2>
-          </div>
-        </div>
-      <% end %>
+<div class="flex flex-width items-center" id="main_header">
+    
+    <div class="tc fl w-40" style="padding-right: 10px;" id="titlecontainer">
+        <h1>
+        <strong><span>Code </span></strong>
+        <span><em>for</em></span>
+        <strong>
+          <span id="pdx"> PDX </span>
+        </strong>
+      </h1>
     </div>
-  </div>
-</div>
-
-
-<hr>
-<div class="sectionheader">
-  <h1>Check Out Our Current Projects!</h1>
-</div>
-<div id="projectcontainer">
-
-
-  <% @projects.each do |project| %>
-    <div class="projects" style="background: <%= project.color %>;">
-      <%= link_to "/projects/#{project.id}" do %>
-        <div style="color: white;">
-          <%= image_tag project.img, alt: project.title, margin: "20px" %>
-        </div>
-        <div style="color: white; text-align: left;">
-          <h3> <%= project.title %> </h3>
-          <p> <%= markdown project.text %> </p>
-        </div>
-      <% end %>
-    </div>
-    <% end %>
-</div>
-
-<hr>
-
-<div class="sectionheader text_color">
-  <h1>Latest News</h1>
-</div>
-
-<div class="featurecontainer background_greenblue text_white" style="
-width: 100%;
-background-image: url(<%= image_path @blog.img %>);
-background-repeat: no-repeat;
-background-size: cover;
-border-top: 2px solid #ffff;
-padding-bottom: 3rem;
-margin-top: 50px;
-
-min-height: 550px;
-background-position: center;
-">
-<br>
-
-  <div id="newsbody">
-        <%= link_to "/blogs/#{@blog.id}" do %>
-          <h2 class="text_white"><%= @blog.title %></h2>
-          <h4 class="text_white"><%= @blog.subtitle %></h4>
-          <p>
-
-            <span class="text_white">
-              <% if @blog.updated_at > @blog.created_at %>
-                Updated <%= @blog.updated_at.to_s[5,5]%>
-              <% else %>
-                <%= @blog.created_at.to_s[5,5] %>
-              <% end %>
-            </span>
-          </p>
-        <% end %>
-        <p class="text-white"><%= markdown @blog.text[0,200] %>...</p>
-        <br>
-        <%= link_to blogs_path  do %>
-            <p class="text_greenblue"> Click Here For the Latest News <i class="fas fa-arrow-right"></i> </p>
-        <% end %>
-  </div>
-
-</div>
-
-<div class="featurecontainer background_lightgray" style="min-height: 500px; padding: 40px;">
-    <div class="sectionheader">
-      <h1>Our Partners</h1>
+    
+    <div class="tc fl w-60 v-btm">
+      <h5 class="code"> >> a Portland based civic-tech nonprofit affiliated with <a href="http://www.codeforamerica.org" target="_blank" class="b"> 
+      Code for America </a>.</h5>
     </div>
 
-  <div class="partner">
-    <%= link_to "https://www.clackamas.us/h3s", target: "_blank" do %>
-      <%= image_tag "chhhs.jpg", alt: "Clackamas County HHHS", width: "450px", height:"200px;", margin: "20px"%>
-    <% end %>
-  </div>
-  <div class="partner">
-    <%= link_to "https://thecommonslawcenter.org/", target: "_blank" do %>
-      <%= image_tag "commonslaw.png", alt: "Commons Law Center", width: "400px", height:"150px;", margin:"20px;"%>
-    <% end %>
-  </div>
-  <div class="partner">
-                          >
-    <%= link_to "https://www.mpdlaw.com/", target: "_blank" do %>
-      <%= image_tag "metro.jpg", alt: "Metropolitan Public Defender's Office", width: "400px", height:"100px;", margin:"20px;"%>
-    <%  end %>
+</div>
 
+<%= link_to  @meeting.url, target: "_blank" do  %>
+<article data-name="article-full-bleed-background">
+  <div class="cf" style="background: url(<%= asset_path 'c4pdx_blue.jpg' %>) no-repeat center center fixed; background-size: cover;">
+    <div class="fl pa3 pa4-ns bg-white black-70 measure-narrow f3 times">
+      <header class="bb b--black-70 pv4">
+        <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Next Meeting: <%= @meeting.title %></h3>
+        <h4 class="f3 fw4 i lh-title mt0">Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%I:%M %p') %></h4>
+      </header>
+      <section class="pt5 pb4">
+        <p class="times lh-copy measure f4 mt0">
+           <%= @meeting.body %> 
+        </p>
+      </section>
+      <div class="tc">
+       <a class="no-underline near-white bg-animate bg-near-black hover-bg-gray inline-flex items-center ma2 tc br2 pa2" href="<%= @meeting.url %>" title="Meetup">
+        <i class="fab fa-meetup"></i>
+        <span class="f6 ml3 pr2">RSVP on Meetup!</span>
+      </a>
+      </div>
+    </div>
+        <iframe src= '<%= @meeting.googlemapurl %>'
+          width="400"
+          height="350"
+          frameborder="0"
+          style="border:0"
+          allowfullscreen>
+        </iframe>
+  </div>
+</article>
+<% end %>
+
+<div class="flex">
+  <div class= "w-70"> </div>
+  <div class="w-30 tc bg-light-yellow">
+      <h5><a href="<%= @meeting.url %>" target="_blank"> >>connect on Meetup! <i class="fab fa-meetup"></i> </h5> </a>
   </div>
 
 </div>
-
-<div class="featurecontainer background_darkblue">
-  <div class="contact spaced text_white"  style="margin:20px 80px;">
-    <br>
-    <div class="text_white">
-      <h1>Get In Touch:</h1>
-    </div>
-    <p>
-      <i class="far fa-check-square text_greenblue "></i>
-      Get started easily with our
-      <%= link_to 'Quick Start Guide', quickstart_path, class: "text_greenblue" %>.
-    </p>
-    <p>
-      <i class="fab fa-twitter-square text_greenblue"></i>
-      Keep up with us on
-      <%= link_to 'Twitter', 'https://twitter.com/codeforpdx', target: '_blank', class: "text_greenblue" %>
-    </p>
-    <p>
-      <i class="fab fa-github-square text_greenblue"></i>
-      Fork and modify our projects on
-      <%= link_to 'Github', 'https://github.com/codeforpdx', target: '_blank', class: "text_greenblue"  %>.
-    </p>
-    <p>
-      <i class="fab fa-slack text_greenblue"></i>
-      Join the discussion! Chat with us on
-      <%= link_to 'Slack', 'https://codeforpdx.slack.com/', target: '_blank', class: "text_greenblue" %>.
-    </p>
-    <p>
-      <i class="fab fa-meetup text_greenblue"></i>
-      Come to a meetup! Join us on
-      <%= link_to 'Meetup.com', 'https://www.meetup.com/Code-for-PDX/', target: '_blank', class: "text_greenblue" %>
-      for the updates on when and where we're meeting.
-    </p>
-  </div>
-  <br>
+<div id="second_feature">
+  <div class="w-100 tc">
+  <h1>Featured project </h1>
 </div>
-<hr>
-<div class="featurecontainer">
-    <div class="sectionheader" style="padding: 10px 20px;">
-      <h2> Support Code for PDX </h2>
-    </div>
-    <div style="padding: 60px;">
-      <p>
-        Our Supporters.
-        We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
-        While Code for America subsidizes our operating costs,
-        if Code for PDX is to continue its mission we will soon need the financial support of local sponsors,
-        By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
-        Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
-      </p>
-    </div>
-    <div style="text-align: center;">
-      <%= link_to "Donate Today!", "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", class: "button" %>
-    </div>
+
+<div id="third_feature">
+  <h1>Other projects </h1>
+  <div id="projects container" class="flex flex-wrap" style="width: 80%; background-color: darkgray; padding: 10px 5px; overflow; auto; text-align: center;">
+    <div class= "dim ba" style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 1 test</h2></div>
+    <div style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 2 test</h2></div>
+    <div style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 3 test</h2></div>
   </div>
+<div>
+
+<div id="partners">
+  <h1>Our partners</h1>
+</div>
+
+<div id="support">
+  <h1>Donate Now</h1>
+</div>
+
 
 
 

@@ -27,19 +27,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Google fonts -->
      <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Roboto+Slab:700|Lato:300|Merriweather:300" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
   </head>
 
-  <body>
-    <%= render '/shared/header' %>
+  <body class="bt b--gold bw3 flex flex-wrap">
+    <div class="fl w-10 bg-washed-blue">
+    </div>
 
-    <main role="main">
+    <div class="fl w-80 ">
+        <%= render '/shared/header' %>
 
-      <%= yield %>
-    </main>
+        <main role="main">
 
+        <%= yield %>
 
+        </main>
+    </div>
+
+    <div class="fl w-10 bg-washed-blue ">
+    </div>
+
+   <%= render 'shared/footer' %>
   </body>
-  <%= render 'shared/footer' %>
+ 
 </html>
 
  <%= alerts %>

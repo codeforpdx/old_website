@@ -1,22 +1,17 @@
-<header>
-<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background: white; border-bottom: 2px solid black;">
-  <%= link_to root_path, class: 'navbar-brand offset-lg-1 offset-xl-2' do %>
-    <p id="smlogo"><strong> < pdx /> </strong> </p>
-  <% end %>
+<header class="flex">
+<div class="fl w-80 tl" style="padding-left: 30px;">
+    <%= link_to root_path do %>
+    <%= image_tag "logo_color", width: "90px", id: "logo", marginleft: "10px", class:"grow"%>
+    <% end %>	
+</div>
 
+  <div class="fl w-20 tr ">
+     <button class="openbtn" onclick="openNav()" style="margin-right: 10px">&#9776; 
+    </button> 
+</div>
 
-  <button style="right:0px" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-
-      <%= nav_helper 'nav-item nav-link', 'li' %>
-
-    </ul>
-  </div>
-  <% if current_user %>
-
-  <% end %>
-</nav>
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <%= nav_helper 'nav-item nav-link', 'a' %>
+</div>
 </header>

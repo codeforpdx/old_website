@@ -103,14 +103,19 @@ module ApplicationHelper
 			title: "Home",
       target: "_self",
       iclass: 'fas fa-home',
-		},
-		#{
-		#	url: news_path,
-		#	title: "News",
-    # target: "_self"
-		#},
-    about_items,
-    connect_items,
+    },
+    {
+      url: about_path,
+      title: "About Us",
+      target: "_self",
+      iclass: 'fas fa-users'
+    },
+    {
+      url: projects_path,
+      title: "Projects",
+      target: "_self",
+      iclass: 'fas fa-wrench'
+    },
     {
       url: blogs_path,
       title: "Blog",
@@ -122,6 +127,30 @@ module ApplicationHelper
       title: "Donate",
       target: "_self",
       iclass: 'fas fa-donate'
+    },
+    {
+      url: 'https://twitter.com/codeforpdx',
+      title: 'Twitter',
+      target: '_blank',
+      iclass: 'fab fa-twitter'
+    },
+    {
+      url: 'https://codeforpdx.slack.com/',
+      title: "Slack",
+      target: "_blank",
+      iclass: 'fab fa-slack-hash'
+    },
+    {
+      url: 'https://www.meetup.com/Code-for-PDX/',
+      title: "Meetup",
+      target: "_blank",
+      iclass: 'fab fa-meetup'
+    },
+    {
+      url: 'https://github.com/codeforportland',
+      title: "GitHub",
+      target: "_blank",
+      iclass: 'fab fa-github'
     }
     #{
     #  url: contact_path,
