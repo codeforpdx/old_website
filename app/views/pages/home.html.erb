@@ -18,11 +18,12 @@
 
 </div>
 
-<%= link_to  @meeting.url, target: "_blank" do  %>
+
 <article data-name="article-full-bleed-background">
   <div class="cf" style="background: url(<%= asset_path 'c4pdx_blue.jpg' %>) no-repeat center center fixed; background-size: cover;">
     <div class="fl pa3 pa4-ns bg-white black-70 measure-narrow f3 times">
-      <header class="bb b--black-70 pv4">
+      
+      <header class="bb b--black-70 pv4 ">
         <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Next Meeting: <%= @meeting.title %></h3>
         <h4 class="f3 fw4 i lh-title mt0">Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%I:%M %p') %></h4>
       </header>
@@ -47,35 +48,102 @@
         </iframe>
   </div>
 </article>
-<% end %>
 
 <div class="flex">
   <div class= "w-70"> </div>
   <div class="w-30 tc bg-light-yellow">
       <h5><a href="<%= @meeting.url %>" target="_blank"> >>connect on Meetup! <i class="fab fa-meetup"></i> </h5> </a>
   </div>
+</div>
+
+<div class="w-40 tl sans-serif " style="margin: 50px;"> 
+  <h1>
+   <br>
+    <br>
+    <br>
+  </h1>
+  <p>
+     As a <a href="http://www.codeforamerica.org" target="_blank"> Code for America Brigade </a>,
+      we're part of a national network of civic-minded volunteers
+      who contribute their skills toward using the web
+      as a platform for local government and community service.
+  </p>
 
 </div>
+
 <div id="second_feature">
   <div class="w-100 tc">
   <h1>Featured project </h1>
+  <%= image_tag "c4pdx.jpg"%>
 </div>
 
-<div id="third_feature">
-  <h1>Other projects </h1>
-  <div id="projects container" class="flex flex-wrap" style="width: 80%; background-color: darkgray; padding: 10px 5px; overflow; auto; text-align: center;">
-    <div class= "dim ba" style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 1 test</h2></div>
-    <div style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 2 test</h2></div>
-    <div style=" margin: 10px auto; width: 300px; height: 300px; padding: 3px; background-color: lightgray;"><h2>card 3 test</h2></div>
-  </div>
+  <h1 style="font-size: 3em">Other projects </h1>
+<div id="third_feature" class="w-100 flex flex-wrap" style="justify-content: center;">
+
+      <% @projects.each do |project| %>
+        <div class= "dim" style="padding: 2%" >
+          <%= link_to "/projects/#{project.id}" do%>
+            <%= image_tag project.img, alt: project.title %>
+          <% end %>
+        </div>
+      <% end %>
 <div>
 
 <div id="partners">
   <h1>Our partners</h1>
+    <div class="flex flex-wrap" style="justify-content: center;">
+      <div class="partner dim">
+        <%= link_to "https://www.clackamas.us/h3s", target: "_blank" do %>
+          <%= image_tag "chhhs.jpg", alt: "Clackamas County HHHS", width: "450px", height:"200px;", margin: "20px"%>
+        <% end %>
+      </div>
+
+      <div class="partner dim">
+        <%= link_to "https://thecommonslawcenter.org/", target: "_blank" do %>
+          <%= image_tag "commonslaw.png", alt: "Commons Law Center", width: "400px", height:"150px;", margin:"20px;"%>
+        <% end %>
+      </div>
+
+      <div class="partner dim">
+        <%= link_to "https://www.mpdlaw.com/", target: "_blank" do %>
+          <%= image_tag "metro.jpg", alt: "Metropolitan Public Defender's Office", width: "400px", height:"100px;", margin:"20px;"%>
+        <%  end %>
+    </div>
+
+     <div class="partner dim">
+        <%= link_to "https://www.uncorkedstudios.com/", target: "_blank" do %>
+          <%= image_tag "Uncorked-Logo-2.png", alt: "Uncorked Studios", width: "300px", height:"300px;", margin:"20px;"%>
+        <%  end %>
+    </div>
+
+      <div class="partner dim">
+        <%= link_to "https://xray.fm/", target: "_blank" do %>
+           <%= image_tag "xrayfm.png", alt: "XRAY.FM", width: "200px", height:"100px;", margin:"20px;"%>
+        <%  end %>
+      </div>
+   </div>
 </div>
 
 <div id="support">
-  <h1>Donate Now</h1>
+  <div class="w-100" style="padding: 10px 20px;">
+      <h2> Support Code for PDX </h2>
+    </div>
+    <div class="tc" style="padding: 60px;">
+      <p>
+        Our Supporters.
+        We rely on the help of financial, in-kind supporters and government partners to sustain our efforts tactically and financially.
+        While Code for America subsidizes our operating costs,
+        if Code for PDX is to continue its mission we will soon need the financial support of local sponsors,
+        By supporting Code for PDX with a tax-deductible contribution, your organization will receive recognition at our events and through our many communications channels.
+        Funds go directly toward web hosting, meeting space, and food and beverages for our awesome volunteers.
+      </p>
+      <%= link_to "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX", target: "_blank" do %> 
+        <button class="tc w-20 bg-purple grow br4">
+          <h1> Donate Today! </h1>
+        </button>
+      <% end %>
+    </div>
+
 </div>
 
 
