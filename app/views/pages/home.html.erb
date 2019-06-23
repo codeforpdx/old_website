@@ -20,16 +20,13 @@
   <br>
   <div class="row">
     <div class="col-md-8" style="color:black;">
-        <% if @meeting %>
-          <h1> Next Meeting: <%= @meeting.title %> </h1>
-          <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
-          <h2 class=><%= @meeting.location %> </h2>
-          <p> <%= @meeting.body %> </p>
-            <%= link_to  @meeting.url, target: "_blank" do  %>
+          <h1>Join us at our next event!</h1>
+          <h2>at <%= @meeting.location %></h2>
+            <%= link_to  'https://www.meetup.com/Code-for-PDX/events/', target: "_blank" do  %>
               <div class="button" id="meetupbutton">
                 <h5>RSVP NOW!</h5>
-            </div>
-          <% end %>
+              </div>
+            <% end %>
         </div>
 
         <div class="col-md-2">
@@ -41,15 +38,6 @@
                   allowfullscreen>
           </iframe>
         </div>
-
-      <% else %>
-        <div class="row">
-          <div class="col-lg-12">
-              <h1 class="text_color"> Next Meeting: To Be Announced </h1>
-              <h2 class=>Biweekly Hackathons: TBA </h2>
-          </div>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
