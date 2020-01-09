@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
 
   def home
-    @count = Blog.count
-    @blog = Blog.last
     @projects = Project.all
     @meeting = Meeting.last
   end
@@ -21,7 +19,6 @@ class PagesController < ApplicationController
   # end
 
   def news
-    @news = Blog.all
     #@tweets = SocialTool.twitter_search
     #route model to here add
     #@news = News.recent.page(params[:page]).per(10)

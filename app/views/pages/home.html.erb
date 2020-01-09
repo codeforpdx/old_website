@@ -83,44 +83,6 @@
   <h1>Latest News</h1>
 </div>
 
-<div class="featurecontainer background_greenblue text_white" style="
-width: 100%;
-background-image: url(<%= image_path @blog.img %>);
-background-repeat: no-repeat;
-background-size: cover;
-border-top: 2px solid #ffff;
-padding-bottom: 3rem;
-margin-top: 50px;
-
-min-height: 550px;
-background-position: center;
-">
-<br>
-
-  <div id="newsbody">
-        <%= link_to "/blogs/#{@blog.id}" do %>
-          <h2 class="text_white"><%= @blog.title %></h2>
-          <h4 class="text_white"><%= @blog.subtitle %></h4>
-          <p>
-
-            <span class="text_white">
-              <% if @blog.updated_at > @blog.created_at %>
-                Updated <%= @blog.updated_at.to_s[5,5]%>
-              <% else %>
-                <%= @blog.created_at.to_s[5,5] %>
-              <% end %>
-            </span>
-          </p>
-        <% end %>
-        <p class="text-white"><%= markdown @blog.text[0,200] %>...</p>
-        <br>
-        <%= link_to blogs_path  do %>
-            <p class="text_greenblue"> Click Here For the Latest News <i class="fas fa-arrow-right"></i> </p>
-        <% end %>
-  </div>
-
-</div>
-
 <div class="featurecontainer background_lightgray" style="min-height: 500px; padding: 40px;">
     <div class="sectionheader">
       <h1>Our Partners</h1>
