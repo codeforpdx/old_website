@@ -112,12 +112,6 @@ module ApplicationHelper
     about_items,
     connect_items,
     {
-      url: blogs_path,
-      title: "Blog",
-      target: "_self",
-      iclass: 'fas fa-rss'
-    },
-    {
       url: "https://secure.codeforamerica.org/page/contribute/default?brigade=Code%20for%20PDX",
       title: "Donate",
       target: "_self",
