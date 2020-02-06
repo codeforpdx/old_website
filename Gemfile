@@ -77,7 +77,7 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 
 #for authentication
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 
 #for authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
