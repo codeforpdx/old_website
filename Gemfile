@@ -65,7 +65,7 @@ gem 'jquery-ui-rails' #required for sortablejs library
 
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 
 gem 'carrierwave-aws', '~> 1.3'
 
