@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #TODO add these columns to Project: :trello link, slack, root color
 
-Blog.create!(
-                title: "Welcome to the new CodeforPDX website!",
-                subtitle: "We are up and running!",
-                text: "Please stay tuned, there will be more shortly.",
-                img: "logo.svg"
-              )
+# Blog.create!(
+#                 title: "Welcome to the new CodeforPDX website!",
+#                 subtitle: "We are up and running!",
+#                 text: "Please stay tuned, there will be more shortly.",
+#                 img: "logo.svg"
+#               )
 
 Project.create!(
   title: "Access2Justice: Commons Law Center",
