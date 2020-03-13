@@ -83,27 +83,39 @@
   <h1>Latest News</h1>
 </div>
 
-<div class="featurecontainer background_lightgray" style="min-height: 500px; padding: 40px;">
+<div class="featurecontainer background_white" style="min-height: 500px; padding: 40px;">
     <div class="sectionheader">
       <h1>Our Partners</h1>
     </div>
 
-  <div class="partner">
-    <%= link_to "https://www.clackamas.us/h3s", target: "_blank" do %>
-      <%= image_tag "chhhs.jpg", alt: "Clackamas County HHHS", width: "450px", height:"200px;", margin: "20px"%>
+  <div class="partner grow">
+    <%= link_to "https://www.freshconsulting.com/", target: "_blank" do %>
+      <%= image_tag "fresh_regular_logo.png", alt: "Fresh Consulting", width: "450px", height:"200px;", margin: "20px"%>
     <% end %>
   </div>
-  <div class="partner">
+
+  <div class="partner grow">
+  <%= link_to "https://www.alchemycodelab.com/", target: "_blank" do %>
+    <%= image_tag "alchemy.png", alt: "Alchemy Code Lab", width: "450px", height:"450px;", margin: "20px"%>
+  <% end %>
+</div>
+
+<div class="partner grow">
+<%= link_to "http://www.pizzajerkpdx.com/", target: "_blank" do %>
+  <%= image_tag "pizzajerk.jpeg", alt: "Pizza Jerk", width: "450px", height:"450px;", margin: "20px"%>
+<% end %>
+</div>
+
+<div class="partner grow">
+<%= link_to "https://xray.fm/", target: "_blank" do %>
+  <%= image_tag "xray.png", alt: "XRAY FM", width: "450px", height:"250px;", margin: "20px"%>
+<% end %>
+</div>
+
+  <div class="partner grow">
     <%= link_to "https://thecommonslawcenter.org/", target: "_blank" do %>
       <%= image_tag "commonslaw.png", alt: "Commons Law Center", width: "400px", height:"150px;", margin:"20px;"%>
     <% end %>
-  </div>
-  <div class="partner">
-                          >
-    <%= link_to "https://www.mpdlaw.com/", target: "_blank" do %>
-      <%= image_tag "metro.jpg", alt: "Metropolitan Public Defender's Office", width: "400px", height:"100px;", margin:"20px;"%>
-    <%  end %>
-
   </div>
 
 </div>
