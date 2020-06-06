@@ -75,11 +75,5 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: codeforpdx_production
-  username: codeforpdx
-  password: <%= ENV['CODEFORPDX_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
